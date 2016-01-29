@@ -25,7 +25,8 @@ font-family: "Fira Sans";
      text-align: center;
      color: #FFFFFF;
      font-family: "Fira Sans";
-     font-size: 100px;
+     font-weight: normal;
+     font-size: 50px;
 }
 
 .myInfo {
@@ -50,32 +51,31 @@ font-family: "Fira Sans";
      z-index: -1;	
 }
 
-.jumbotron p {
-     color: #000000;    
-}
-
 #image {
-     width: 150%;
-     height: 150%;
-}
-.project {
-     position: relative;
+     width: 70%;
+     float: right;
 }
 .name {
      list-style-type: none;
-     font-size: 50px;
+     font-size: 20px;
      color: #FFFFFF;
      font-family: "Fira Sans";
+     padding-top: 30px;
 }
 #categories {
-     font-size: 80px;
-     font-family: "Fira Sans"
+     font-size: 40px;
+     font-family: "Fira Sans";
+     font-weight: light;
+     background-color: #000000;
+     font-color: #fff;
 }
-a {
+a.thumbnail {
      text-decoration: none !important;
 }
-
-#categories:hover {
-     text-decoration: none !important;
+#help {
+     float: right;
+     width: 15%;
+     padding: 40px;
+     margin-right: -150px;
 }
 
