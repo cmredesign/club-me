@@ -9,14 +9,38 @@
 	color: #CC00AA;
 }
 
+body {
+background: rgba(78,111,153,1);
+background: -moz-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(78,111,153,1)), color-stop(100%, rgba(22,45,90,1)));
+background: -webkit-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
+background: linear-gradient(135deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e6f99', endColorstr='#162d5a', GradientType=1 );
+font-family: "Fira Sans";
+}
+
+#profile {
+     text-align: center;
+     color: #FFFFFF;
+     font-family: "Fira Sans";
+     font-size: 100px;
+}
+
+.myInfo {
+     padding-bottom: 100px;
+     margin-left: 100px;
+     margin-right: 100px;
+     margin-bottom: 100px;
+}
 .jumbotron {
 	position: relative;
-	background: none;
+	background: rgba(78,111,153,1);
 }
 
 .jumbotron:after {
      content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
      opacity: 0.2;
      top: 0;
      left: 0;
@@ -27,9 +51,31 @@
 }
 
 .jumbotron p {
-     color: #6e6e6e;
+     color: #000000;    
 }
 
-.project a {
-     text-align: center;
+#image {
+     width: 150%;
+     height: 150%;
 }
+.project {
+     position: relative;
+}
+.name {
+     list-style-type: none;
+     font-size: 50px;
+     color: #FFFFFF;
+     font-family: "Fira Sans";
+}
+#categories {
+     font-size: 80px;
+     font-family: "Fira Sans"
+}
+a {
+     text-decoration: none !important;
+}
+
+#categories:hover {
+     text-decoration: none !important;
+}
+

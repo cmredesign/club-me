@@ -306,7 +306,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #ffffff;
   background-color: #ffffff;
 }
 
@@ -320,14 +320,14 @@ textarea {
 }
 
 a {
-  color: #428bca;
+  color: #ffffff;
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:focus {
@@ -353,10 +353,10 @@ img {
 .img-thumbnail {
   display: inline-block;
   height: auto;
-  max-width: 100%;
+  max-width: 50%;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: #ffffff;
+  background-color: #6475a0;
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -400,7 +400,7 @@ h6,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit;
+  color: #ffffff;
 }
 
 h1 small,
@@ -429,7 +429,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #999999;
+  color: #ffffff;
 }
 
 h1,
@@ -525,7 +525,7 @@ cite {
 }
 
 .text-primary {
-  color: #428bca;
+  color: #ffffff;
 }
 
 .text-primary:hover {
