@@ -10,22 +10,22 @@
 }
 
 body {
-background-image: url('../images/back.gif');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-/*background: rgba(78,111,153,1);
-background: -moz-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(78,111,153,1)), color-stop(100%, rgba(22,45,90,1)));
-background: -webkit-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
-background: linear-gradient(135deg, rgba(78,111,153,1) 0%, rgba(22,45,90,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e6f99', endColorstr='#162d5a', GradientType=1 );*/
+background: rgba(41,28,2,1);
+background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
 font-family: "Fira Sans";
+font-weight: lighter;
 }
-
+#name {
+     font-size: 80px; 
+     display: inline-block;
+     text-align: center;
+}
 #profile {
      text-align: center;
      color: #FFFFFF;
@@ -66,12 +66,15 @@ font-family: "Fira Sans";
      font-family: "Fira Sans";
      padding-top: 30px;
 }
+
 #categories {
      font-size: 40px;
      font-family: "Fira Sans";
      font-weight: light;
-     background-color: transparent;
      font-color: #fff;
+}
+.thumbnail {
+     display: inline-block;
 }
 a.thumbnail {
      text-decoration: none !important;
