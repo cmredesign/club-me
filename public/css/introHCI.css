@@ -72,6 +72,7 @@ font-weight: lighter;
      font-family: "Fira Sans";
      font-weight: light;
      font-color: #fff;
+     display: inline-block;
 }
 .thumbnail {
      display: inline-block;
