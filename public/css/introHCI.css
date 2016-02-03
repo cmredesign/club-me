@@ -9,6 +9,12 @@
 	color: #CC00AA;
 }
 
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 body {
 background: rgba(41,28,2,1);
 background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
