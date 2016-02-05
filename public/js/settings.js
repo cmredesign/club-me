@@ -3,7 +3,8 @@
 */
 
 exports.view = function(req, res){
-  res.render('settings', {
+  console.log("first one");
+  /*res.render('settings', {
     'settings': [
     { 'name': 'Email Notifications',
       'image': 'Checked.png',
@@ -18,5 +19,5 @@ exports.view = function(req, res){
       'id': 'setting3'
     },
     ]
-  });
+  });*/
 }

@@ -1,6 +1,3 @@
-/*
- * GET settings god damn it
-*/
 
 exports.view = function(req, res){
   res.render('settings', {
