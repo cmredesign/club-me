@@ -43,13 +43,16 @@
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		{{#each projects}}
-      <div class="col-md-6" class="project" id="{{id}}">
-        <a href="project/{{name}}" class="thumbnail">
-        <img src="images/{{image}}" ... />
-          <p id="categories" class="text-center">{{name}}</p>
-        </a>
+    {{#each projects}}
+    <div class="row">
+      <div class="col-md-3 vcenter"></div>
+      <div class="col-md-2 vcenter" class="project" id="{{id}}">
+      <img src="images/{{image}}" ... />
       </div>
+      <div class="col-md-6 vcenter">
+        <p id="categories" class="text-left">{{name}}</p>
+      </div>
+    </div>
     {{/each}}
     <!--<div>
     	<img class="img-responsive" id="help" src="images/help.png"/></div>	

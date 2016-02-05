@@ -72,6 +72,7 @@ font-weight: lighter;
      font-family: "Fira Sans";
      font-weight: light;
      font-color: #fff;
+     display: inline-block;
 }
 .thumbnail {
      display: inline-block;
@@ -86,3 +87,9 @@ a.thumbnail {
      margin-right: -150px;
 }
 
+/* used to center icons */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
