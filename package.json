@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "IntroHCI",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
@@ -23,24 +22,4 @@
   "engines": {
     "node": "0.10.x"
   }  
-=======
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
-  "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
-
-  "repository": {
-  	"type": "git",
-  	"url": "https://github.com/StanfordHCI/cs147"
-  },
-  "license": "MIT",
-
-  "main": "server.js",
-  "dependencies": {
-    "express": "3.x"
-  },
-  "engines": {
-  	"node": "0.10.x"
-  }
->>>>>>> 9e1dd97a9fde091852a9514190433df8e7f2f299
 }
