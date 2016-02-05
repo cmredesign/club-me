@@ -87,3 +87,9 @@ a.thumbnail {
      margin-right: -150px;
 }
 
+/* used to center icons */
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
