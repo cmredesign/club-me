@@ -27,11 +27,11 @@
 			<h1 id="profile">My Profile</h1>
 		</div>
 		<div class="myInfo">
-			<div class="col-md-6">
-			<img class="img-responsive" id ="image" src="images/profile.png"/></div>
+			<div>
+			<img class="img-responsive" id ="image" src="http://ghostlypixels.com/wp-content/themes/illustrate-ghostly/images/profile-pic.png"/></div>
 				<ul class="name">
-				<li id="name">John Doe <img class="img-responsive" src="images/gender.png" width ="60"/></li>
-				<li>First Year || Revelle || Human Biology</li>
+				<li id="name">John Doe <img src="images/gender.png" width ="30"/></li>
+				<li id="info">First Year || Revelle || Biology</li>
 			</ul>
 		</div>
 		<!--<ol>
@@ -45,17 +45,14 @@
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
     {{#each projects}}
     <div class="row">
-      <div class="col-md-3 vcenter"></div>
-      <div class="col-md-2 vcenter" class="project" id="{{id}}">
+      <div class="col-xs-3"></div>
+      <div class="project" id="{{id}}">
       <a href="project/{{name}}" class="thumbnail">
-        <img src="images/{{image}}" ... />
+      	<img class="col-sm-3" class="icon" src="images/{{image}}" ... />
+      	<p id="categories" class="text-center">{{name}}</p>
       </a>
       </div>
-      <a href="project/{{name}}" class="thumbnail">
-        <div class="col-md-6 vcenter">
-          <p id="categories" class="text-center">{{name}}</p>
-        </div>
-      </a>
+ 
     </div>
     {{/each}}
     <!--<div>

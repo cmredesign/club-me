@@ -10,22 +10,32 @@
 }
 
 body {
-background: rgba(41,28,2,1);
-background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
-background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
-font-family: "Fira Sans";
-font-weight: lighter;
+     background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+     font-family: "Fira Sans";
+     font-weight: lighter;
 }
-#name {
-     font-size: 80px; 
-     display: inline-block;
+
+.container {
+     display: block;
      text-align: center;
 }
+
+#name {
+     font-size: 40px; 
+     display: block;
+}
+#info {
+     text-align: center;
+     display: block;
+}
+
 #profile {
      text-align: center;
      color: #FFFFFF;
@@ -34,11 +44,6 @@ font-weight: lighter;
      font-size: 50px;
 }
 
-.myInfo {
-     padding-bottom: 100px;
-     margin-left: 100px;
-     margin-bottom: 100px;
-}
 .jumbotron {
 	position: relative;
      background: #000000;
@@ -56,30 +61,38 @@ font-weight: lighter;
 }
 
 #image {
-     width: 70%;
-     float: right;
+     width: 100%;
 }
 .name {
      list-style-type: none;
      font-size: 20px;
      color: #FFFFFF;
      font-family: "Fira Sans";
-     padding-top: 30px;
+     padding-top: 20px;
+}
+
+.icon {
+     width: 100%;
+     text-align: center;
+     display: block;
 }
 
 #categories {
-     font-size: 40px;
+     font-size: 35px;
      font-family: "Fira Sans";
      font-weight: light;
      font-color: #fff;
-     display: inline-block;
+     text-align: center;
 }
 .thumbnail {
-     display: inline-block;
+     display: block;
 }
-a.thumbnail {
+
+.thumbnail:hover{
      text-decoration: none !important;
+     
 }
+
 #help {
      float: right;
      width: 15%;
@@ -89,7 +102,7 @@ a.thumbnail {
 
 /* used to center icons */
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
 }
