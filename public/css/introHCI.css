@@ -28,10 +28,11 @@ body {
 }
 
 #name {
-     font-size: 40px; 
+     font-size: 50px; 
      display: block;
 }
 #info {
+     font-size: 20px;
      text-align: center;
      display: block;
 }
@@ -39,14 +40,13 @@ body {
 #profile {
      text-align: center;
      color: #FFFFFF;
-     font-family: "Fira Sans";
-     font-weight: normal;
+     font-family: "Meta";
      font-size: 50px;
 }
 
 .jumbotron {
 	position: relative;
-     background: #000000;
+     background: #25231e;
 }
 
 .jumbotron:after {
@@ -60,8 +60,12 @@ body {
      z-index: -1;	
 }
 
+#header {
+     display: inline-block;
+}
+
 #image {
-     width: 100%;
+     width: 90%;
 }
 .name {
      list-style-type: none;
