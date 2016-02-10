@@ -14,6 +14,8 @@ var matchme = require('./routes/matchme');
 var settings = require('./routes/settings');
 var myclubs = require('./routes/myclubs');
 var update = require('./routes/update');
+var csignup = require('./routes/csignup');
+var isignup = require('./routes/isignup');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,6 +47,8 @@ app.get('/project/:name', project.viewProject);
 app.get('/settings', settings.view);
 app.get('/matchme', matchme.view);
 app.get('/update', update.view);
+app.get('/csignup', csignup.view);
+app.get('/isignup', isignup.view);
 // Example route
 // app.get('/users', user.list);
 
