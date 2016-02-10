@@ -10,38 +10,42 @@
 }
 
 body {
-background: rgba(41,28,2,1);
-background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
-background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
-font-family: "Fira Sans";
-font-weight: lighter;
+     background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+     font-family: "Fira Sans";
+     font-weight: lighter;
 }
-#name {
-     font-size: 80px; 
-     display: inline-block;
+
+.container {
+     display: block;
      text-align: center;
 }
+
+#name {
+     font-size: 50px; 
+     display: block;
+}
+#info {
+     font-size: 20px;
+     text-align: center;
+     display: block;
+}
+
 #profile {
      text-align: center;
      color: #FFFFFF;
-     font-family: "Fira Sans";
-     font-weight: normal;
      font-size: 50px;
 }
 
-.myInfo {
-     padding-bottom: 100px;
-     margin-left: 100px;
-     margin-bottom: 100px;
-}
 .jumbotron {
 	position: relative;
-     background: #000000;
+     background: #25231e;
 }
 
 .jumbotron:after {
@@ -55,34 +59,71 @@ font-weight: lighter;
      z-index: -1;	
 }
 
+#header {
+     display: inline-block;
+}
+
 #image {
-     width: 70%;
-     float: right;
+     padding-top: 30px;
+     width: 80%;
 }
 .name {
      list-style-type: none;
      font-size: 20px;
      color: #FFFFFF;
      font-family: "Fira Sans";
-     padding-top: 30px;
+     padding-top: 20px;
+}
+
+.icon {
+     width: 100%;
+     text-align: center;
+     display: block;
 }
 
 #categories {
-     font-size: 40px;
+     font-size: 35px;
      font-family: "Fira Sans";
      font-weight: light;
      font-color: #fff;
+     text-align: center;
 }
 .thumbnail {
-     display: inline-block;
-}
-a.thumbnail {
-     text-decoration: none !important;
-}
-#help {
-     float: right;
-     width: 15%;
-     padding: 40px;
-     margin-right: -150px;
+     display: block;
 }
 
+.thumbnail:hover{
+     text-decoration: none !important;
+     
+}
+
+#help {
+     float: right;
+     width: 20%;
+     padding-bottom: 10px;
+}
+
+/* used to center icons */
+.vcenter {
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
+}
+
+#imaginary_container {
+     margin-top: 30px;
+     padding-bottom: 50px;
+}
+.stylish-input-group .input-group-addon{
+    background: white;
+    opacity: 0.5;
+}
+.stylish-input-group .form-control{
+     border-right:0; 
+     box-shadow:0 0 0; 
+     border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
