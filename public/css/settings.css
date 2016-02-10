@@ -4,6 +4,7 @@ body {
      border: 1px dotted gray;
      padding: 20px;
      background-color: #1b366d;
+     font-family: "Fira Sans";
 }
 
 .settings p {
