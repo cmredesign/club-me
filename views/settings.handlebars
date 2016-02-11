@@ -22,7 +22,9 @@
 	<!-- this is a comment in HTML -->
   {{#each settings}}
 	<div class="container">
-        <img class = "img-responsive" src = "images/{{image}}" width = "50" height = "50"/>
+        <a href="#" onclick="toggleCheck({{id}})"> 
+          <img class = "img-responsive" id = "{{id}}" src = "images/{{image1}}" width = "50" height = "50"/>
+        </a>
         {{name}}
       </div>
     {{/each}}
