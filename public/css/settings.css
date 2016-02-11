@@ -1,19 +1,21 @@
 //* this style exists to make it obvious that you've successfully linked
    the CSS to the page. feel free to remove it once the link is working. */
 body {
-     border: 1px dotted gray;
-     padding: 20px;
-     background-color: #1b366d;
+background: rgba(41,28,2,1);
+background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+font-family: "Fira Sans";
+font-weight: lighter;
 }
 
 .settings p {
      margin-left: 10px;
      background-color: #deebf7;
-     width: 500px;
+     font-size: 50px;
      font-variant: small-caps;
-}
-
-.settings img {
-     width: 10px;
-     height: 10px;
 }
