@@ -4,8 +4,8 @@
  */
 
 exports.view = function(req, res){
-   res.render('index', {
-    'projects': [
+   res.render('dance', {
+    'dance': [
       { 'name': 'Match Me',
         'image': 'match.png',
         'id': 'project1'

@@ -19,6 +19,7 @@ var csignup = require('./routes/csignup');
 var isignup = require('./routes/isignup');
 var dance = require('./routes/dance');
 var ttv = require('./routes/ttv');
+var nmotion = require('./routes/nmotion');
 // Example route
 // var user = require('./routes/user');
 
@@ -56,6 +57,7 @@ app.get('/csignup', csignup.view);
 app.get('/isignup', isignup.view);
 app.get('/dance', dance.view);
 app.get('/ttv', ttv.view);
+app.get('/nmotion', nmotion.view);
 // Example route
 // app.get('/users', user.list);
 

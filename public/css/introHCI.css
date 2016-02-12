@@ -97,7 +97,7 @@ body.slide-active {
          position: fixed;
          top: 0;
          height: 100%;
-      bottom:0;
+         bottom:0;
          width: 80%;
          left: -80%;
          background: #f7f7f7;
@@ -251,9 +251,9 @@ body {
 
 #imaginary_container {
      opacity: 0.8;
-     left: 12%;
+     left: 15%;
      top: 17%;
-     width: 85%;
+     width: 82.5%;
      position: absolute;
 }
 .stylish-input-group .input-group-addon{
@@ -345,9 +345,10 @@ h3 {
 }
 
 .bio {
+     text-align: center;
+     display: block;
      margin-top: 20px;
-     margin-left: 9%;
-     width: 400px;
+     width: 300px;
      font-weight: lighter;
      font-family: "Fira Sans"; 
      font-size: 18px;
@@ -361,4 +362,15 @@ h3 {
      width: 100px;
      padding: 20px;
      display: inline-block;
+}
+
+#update {
+    margin-top: 75px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#update h1 {
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
 }
