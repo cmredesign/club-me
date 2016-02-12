@@ -73,7 +73,7 @@ body.slide-active {
          position: absolute;
          padding-left: 0;
          z-index: 2;
-         top: -8px;
+         top: 9.3px;
          margin: 0;
      }
      #slide-nav #slidemenu .navbar-nav {
@@ -90,7 +90,7 @@ body.slide-active {
          border-top: 0
      }
      #slide-nav.navbar-inverse #slidemenu {
-         background: #333
+         background: #333;
      }
      /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
      #navbar-height-col {
@@ -131,10 +131,6 @@ body.slide-active {
      .navbar-header {
          left: 0!important
      }
-}
-
-.active {
-     padding-top: 10px;
 }
 
 
@@ -242,7 +238,7 @@ body {
 
 #help {
      float: right;
-     width: 20%;
+     width: 10%;
      padding-bottom: 10px;
 }
 
@@ -255,9 +251,10 @@ body {
 
 #imaginary_container {
      opacity: 0.8;
-     margin-top: 30px;
-     padding-bottom: 50px;
-     display:inline-block;
+     left: 12%;
+     top: 17%;
+     width: 85%;
+     position: absolute;
 }
 .stylish-input-group .input-group-addon{
     background: white;
@@ -275,8 +272,34 @@ body {
 
 .styled h2{
      font-family: "Fira Sans";
+     font-weight: lighter;
      margin-left: 30px;
-     margin-top: 30px;
+     margin-top: 5px;
+     margin-bottom: 20px;
+}
+.styled {
+    padding-right: 30px;
+}
+
+h4{
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+}
+
+.drawer-handle {
+     margin-left: -25px;
+     margin-right: 20px;
+     border-radius: 10px;
+     border: 1px solid #545154;
+     padding:10px;
+     background: rgba(33,33,33,1);
+background: -moz-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,33,33,1)), color-stop(12%, rgba(41,41,41,1)), color-stop(41%, rgba(46,46,46,1)), color-stop(66%, rgba(33,33,33,1)), color-stop(91%, rgba(13,13,13,1)), color-stop(100%, rgba(8,8,8,1)));
+background: -webkit-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -o-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -ms-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: linear-gradient(to bottom, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#080808', GradientType=0 );
 }
 
 #search {

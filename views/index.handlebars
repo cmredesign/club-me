@@ -21,7 +21,6 @@
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
       <div class="container">
         <div class="navbar-header">
@@ -125,7 +124,83 @@
       <!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
       <!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
       <!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-      
+
+  	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+  		<div class="container">
+  			<div class="navbar-header">
+  				<a class="navbar-toggle"> 
+  					<span class="sr-only">Toggle navigation</span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  					<span class="icon-bar"></span>
+  				</a>
+  				<a class="col-m-6" id="imaginary_container" href="#"> 
+  					<div class="input-group stylish-input-group">
+  						<input type="text" class="form-control"  placeholder="Search" >
+  						<span class="input-group-addon">
+  							<button type="submit">
+  								<span class="glyphicon glyphicon-search"></span>
+  							</button>  
+  						</span>
+  					</div>
+  				</a>
+  			</div>
+  			<div id="slidemenu">
+  				<ul class="nav navbar-nav">
+  					<li class="active"><a href="#">Profile</a></li>
+  					<li><a href="#">Log Out</a></li>			
+  			</div>
+  		</div>
+  	</div>
+
+  	<div id="page-content">
+  		
+  		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+  		<!-- p means paragraph -->
+  	</div>
+  	<div class="container">
+  		<div class="myInfo">
+  			<div>
+  				<img class="img-responsive" id ="image" src="http://ghostlypixels.com/wp-content/themes/illustrate-ghostly/images/profile-pic.png"/></div>
+  				<p id="name">John Doe</p>
+  				<p id="info">First Year || Revelle || Biology</p>
+  			</ul>
+  		</div>
+		<!--<ol>
+    	{{#each projects}}
+      		<li><a href="#{{id}}">{{name}}</a></li>
+    		{{/each}}
+    	</ol>-->
+    	<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+    	<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+    	<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+    	<div class="row">
+    		<div class="col-xs-3"></div>
+    		<div class="project" id="{{id}}">
+    			<a href="matchme" class="thumbnail">
+    				<img class="col-sm-3" class="icon" src="images/match.png" ... />
+    				<p id="categories" class="text-center">Match Me</p>
+    			</a>
+    			<a href="myclubs" class="thumbnail">
+    				<img class="col-sm-3" class="icon" src="images/mine.png" ... />
+    				<p id="categories" class="text-center">My Clubs</p>
+    			</a>
+    			<a href="search" class="thumbnail">
+    				<img class="col-sm-3" class="icon" src="images/search.png" ... />
+    				<p id="categories" class="text-center">Club Search</p>
+    			</a>
+    			<a href="update" class="thumbnail">
+    				<img class="col-sm-3" class="icon" src="images/prof.png" ... />
+    				<p id="categories" class="text-center">Update Profile</p>
+    			</a>
+    		</div>
+
+    	</div>
+
+    	<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+    	<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+    	<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+    	
     <!--<div>
       <img class="img-responsive" id="help" src="images/help.png"/></div> 
     </div>-->
