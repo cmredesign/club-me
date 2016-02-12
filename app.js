@@ -17,6 +17,7 @@ var search = require('./routes/search');
 var update = require('./routes/update');
 var csignup = require('./routes/csignup');
 var isignup = require('./routes/isignup');
+var dance = require('./routes/dance');
 // Example route
 // var user = require('./routes/user');
 
@@ -52,6 +53,7 @@ app.get('/search', search.view);
 app.get('/update', update.view);
 app.get('/csignup', csignup.view);
 app.get('/isignup', isignup.view);
+app.get('/dance', dance.view);
 // Example route
 // app.get('/users', user.list);
 
