@@ -38,21 +38,3 @@ exports.view = function(req, res){
     ]
   });
 }
-
-function toggleCheck(id) 
-{
-    var theImg = document.getElementById(id),
-             x = theImg.src.split("/"),
-             t = x.length-1,
-             y = x[t];
-
-    if(y == 'Checked.png')
-    {
-        theImg.src='./images/Unchecked.jpg'
-    }
-
-    if(y == 'Unchecked.jpg')
-    {
-        theImg.src='./images/Checked.png'
-    }
-}

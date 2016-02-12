@@ -18,16 +18,16 @@
   </head>
   <body>
 
-
-	<!-- this is a comment in HTML -->
+  <p><a href="/">Back &raquo;</a></p>
+	
+  <!-- this is a comment in HTML -->
   {{#each settings}}
-	<div class="container">
-        <a href="#" onclick="toggleCheck({{id}})"> 
-          <img class = "img-responsive" id = "{{id}}" src = "images/{{image1}}" width = "50" height = "50"/>
-        </a>
-        {{name}}
-      </div>
-    {{/each}}
+    <div class="switch">
+      <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+      <label for="cmn-toggle-1"></label>
+      {{name}}
+    </div>
+  {{/each}}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
