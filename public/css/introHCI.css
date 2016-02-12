@@ -286,6 +286,25 @@ h4{
      font-family: "Fira Sans"; 
 }
 
+.ind {
+     margin-bottom: 20px;
+}
+
+.thumb {
+     width: 130px;
+     border: 1px solid #545154;
+     margin-left: 55px;
+}
+.drawerz {
+     font-size: 25px;
+     margin-left: 10px;
+}
+
+.styled a {
+     text-decoration: none ! important;
+}
+
+
 .drawer-handle {
      margin-left: -25px;
      margin-right: 20px;
@@ -307,3 +326,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', end
      margin-top: 30px;
 }
 
+h3 {
+     font-size: 35px;
+     font-family: "Fira Sans";
+     font-weight: lighter;
+     font-color: #FFFFFF;
+     margin-left: 30px;
+     margin-top: 5px;
+     margin-bottom: 20px;
+}
+
+.checkbox {
+     margin-left: 130px;
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+     font-size: 20px;
+     padding: 10px;
+}
+
+.bio {
+     margin-top: 20px;
+     margin-left: 9%;
+     width: 400px;
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+     font-size: 18px;
+}
+
+.social {
+     float:left;
+     margin-left: 92px;
+}
+.icon {
+     width: 100px;
+     padding: 20px;
+     display: inline-block;
+}
