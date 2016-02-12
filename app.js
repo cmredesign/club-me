@@ -47,6 +47,7 @@ app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
 app.get('/settings', settings.view);
 app.get('/matchme', matchme.view);
+app.get('/myclubs', myclubs.view);
 app.get('/search', search.view);
 app.get('/update', update.view);
 app.get('/csignup', csignup.view);
