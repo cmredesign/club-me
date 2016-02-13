@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>clubMe</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="/css/introHCI.css" rel="stylesheet">
+  <link href='https://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet' type='text/css' />
+  <!-- this is a comment in HTML -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->         
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-toggle"> 
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="col-m-6" id="imaginary_container" href="#"> 
+            <div class="input-group stylish-input-group">
+              <input type="text" class="form-control"  placeholder="Search" >
+              <span class="input-group-addon">
+                <button type="submit">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>  
+              </span>
+            </div>
+          </a>
+        </div>
+        <div id="slidemenu">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Profile</a></li>
+            <li><a href="#">Log Out</a></li>      
+        </div>
+      </div>
+    </div>
+
+    <div id="page-content">
+      
+      <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+      <!-- p means paragraph -->
+    </div>
+    <div class="container">
+      <div class="myInfo">
+        <div>
+          <img class="img-responsive" id ="image" src="http://ghostlypixels.com/wp-content/themes/illustrate-ghostly/images/profile-pic.png"/></div>
+          <p id="name">John Doe</p>
+          <p id="info">First Year || Revelle || Biology</p>
+        </ul>
+      </div>
+    <!--<ol>
+      {{#each projects}}
+          <li><a href="#{{id}}">{{name}}</a></li>
+        {{/each}}
+      </ol>-->
+      <!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+      <!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+      <!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+      <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="project" id="{{id}}">
+          <a href="matchme" class="thumbnail">
+            <img class="col-sm-3" class="icon" src="images/match.png" ... />
+            <p id="categories" class="text-center">Match Me</p>
+          </a>
+          <a href="myclubs" class="thumbnail">
+            <img class="col-sm-3" class="icon" src="images/mine.png" ... />
+            <p id="categories" class="text-center">My Clubs</p>
+          </a>
+          <a href="search" class="thumbnail">
+            <img class="col-sm-3" class="icon" src="images/search.png" ... />
+            <p id="categories" class="text-center">Club Search</p>
+          </a>
+          <a href="update" class="thumbnail">
+            <img class="col-sm-3" class="icon" src="images/prof.png" ... />
+            <p id="categories" class="text-center">Update Profile</p>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+      <!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+      <!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+      
+    <!--<div>
+      <img class="img-responsive" id="help" src="images/help.png"/></div> 
+    </div>-->
+
+    <div>
+      <a href="settings">
+        <img class="img-responsive" id="help" src="images/help.png"/>
+      </a>
+    </div>
+
+    <p><a href="csignup">Club Signup &raquo;</a></p>
+    <p><a href="isignup">Individual Signup &raquo;</a></p>
+</div>
+</body>
+
+<!--Figure out a better way to abstract this -->
+<!--It's JQuery that should go into it's own .js-->
+<script>
+$(document).ready(function () {
+    //stick in the fixed 100% height behind the navbar but don't wrap it
+    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
+    
+    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+    // Enter your ids or classes
+    var toggler = '.navbar-toggle';
+    var pagewrapper = '#page-content';
+    var navigationwrapper = '.navbar-header';
+    var menuwidth = '100%'; // the menu inside the slide menu itself
+    var slidewidth = '80%';
+    var menuneg = '-100%';
+    var slideneg = '-80%';
+    $("#slide-nav").on("click", toggler, function (e) {
+      var selected = $(this).hasClass('slide-active');
+      $('#slidemenu').stop().animate({
+        left: selected ? menuneg : '0px'
+      });
+      $('#navbar-height-col').stop().animate({
+        left: selected ? slideneg : '0px'
+      });
+      $(pagewrapper).stop().animate({
+        left: selected ? '0px' : slidewidth
+      });
+      $(navigationwrapper).stop().animate({
+        left: selected ? '0px' : slidewidth
+      });
+      $(this).toggleClass('slide-active', !selected);
+      $('#slidemenu').toggleClass('slide-active');
+      $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
+    });
+    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+    $(window).on("resize", function () {
+      if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
+        $(selected).removeClass('slide-active');
+      }
+    });
+});
+</script>
+</html>
