@@ -1,7 +1,7 @@
 
 exports.view = function(req, res){
-  res.render('matchme', {
-    'matchme': [
+  res.render('search', {
+    'search': [
     { 'name': 'Email Notifications',
       'image': 'Checked.png',
       'id': 'setting1'
@@ -17,5 +17,3 @@ exports.view = function(req, res){
     ]
   });
 }
-
-

@@ -13,9 +13,13 @@ var project = require('./routes/project');
 var matchme = require('./routes/matchme');
 var settings = require('./routes/settings');
 var myclubs = require('./routes/myclubs');
+var search = require('./routes/search');
 var update = require('./routes/update');
 var csignup = require('./routes/csignup');
 var isignup = require('./routes/isignup');
+var dance = require('./routes/dance');
+var ttv = require('./routes/ttv');
+var nmotion = require('./routes/nmotion');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,9 +50,14 @@ app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
 app.get('/settings', settings.view);
 app.get('/matchme', matchme.view);
+app.get('/myclubs', myclubs.view);
+app.get('/search', search.view);
 app.get('/update', update.view);
 app.get('/csignup', csignup.view);
 app.get('/isignup', isignup.view);
+app.get('/dance', dance.view);
+app.get('/ttv', ttv.view);
+app.get('/nmotion', nmotion.view);
 // Example route
 // app.get('/users', user.list);
 

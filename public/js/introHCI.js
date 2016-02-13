@@ -12,7 +12,7 @@ function initializePage() {
 	// add any functionality and listeners you want here
 }
 
-
+/*
 /*Figure out a better way to abstract this
 It's JQuery that should go into it's own .js*/
 $(document).ready(function () {
@@ -81,3 +81,4 @@ $(document).ready(function () {
 
 });
 
+*/
