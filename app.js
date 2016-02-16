@@ -20,6 +20,7 @@ var isignup = require('./routes/isignup');
 var dance = require('./routes/dance');
 var ttv = require('./routes/ttv');
 var nmotion = require('./routes/nmotion');
+var indprofile = require('./routes/indprofile');
 // Example route
 // var user = require('./routes/user');
 
@@ -58,6 +59,7 @@ app.get('/isignup', isignup.view);
 app.get('/dance', dance.view);
 app.get('/ttv', ttv.view);
 app.get('/nmotion', nmotion.view);
+app.get('/indprofile', indprofile.view);
 // Example route
 // app.get('/users', user.list);
 
