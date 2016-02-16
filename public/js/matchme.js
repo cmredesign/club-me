@@ -12,14 +12,14 @@ function initializePage() {
 	// add any functionality and listeners you want here
 
 }
-/*
+
 $(document).ready(function(){
-  $('.your-class').slick({
-    setting-name: setting-value
+  $('.spin').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
   });
 }); 
 
-$('.your-class').slick({
-  rtl: true
-});   
-*/
