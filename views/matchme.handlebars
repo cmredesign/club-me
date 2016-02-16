@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 <html>
@@ -10,6 +11,10 @@
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <link href="/css/introHCI.css" rel="stylesheet">
   <link href='https://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet' type='text/css' />
+
+  <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+  <!-- Add the new slick-theme.css if you want the default styling-->
+  <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
   <!-- this is a comment in HTML -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -44,7 +49,7 @@
         </div>
         <div id="slidemenu">
           <ul class="nav navbar-nav">
-            <li><a href="indprofile">Profile</a></li>
+            <li><a href="/">Profile</a></li>
             <li class="active"><a href="#">Match Me</a></li>
             <li><a href="myclubs">My Clubs</a></li>
             <li><a href="search">Club Search</a></li>
@@ -53,95 +58,63 @@
       </div>
     </div>
 
-    <div id="page-content">
-      
-      <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-      <!-- p means paragraph -->
-    </div>
+    <div id="page-content"></div>
+
+
     <div class="container">
-    
+      <div class="col-md-6">
+      <div class="spin" id="show">
+        <div>
+          <h1>your content1</h1>
+        </div>
+        <div>
+          <h1>your content2</h1>
+        </div>
+        <div>
+          <h1>your content3</h1>
+        </div>
       </div>
+      </div>
+    </div>
 
-      <!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
-      <!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
-      <!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-      
-    <!--<div>
-      <img class="img-responsive" id="help" src="images/help.png"/></div> 
-    </div>-->
 
-    <p><a href="csignup">Club Signup &raquo;</a></p>
-    <p><a href="isignup">Individual Signup &raquo;</a></p>
+    <p><a href="/">Back &raquo;</a></p>
 </div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script src="/js/matchme.js"></script>
+
 </body>
 
-<!--Figure out a better way to abstract this -->
-<!--It's JQuery that should go into it's own .js-->
+<script src="/js/searchbar.js"></script>
 <script>
-$(document).ready(function () {
+'use strict';
 
-
-    //stick in the fixed 100% height behind the navbar but don't wrap it
-    $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
-    
-    $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
-
-    // Enter your ids or classes
-    var toggler = '.navbar-toggle';
-    var pagewrapper = '#page-content';
-    var navigationwrapper = '.navbar-header';
-    var menuwidth = '100%'; // the menu inside the slide menu itself
-    var slidewidth = '80%';
-    var menuneg = '-100%';
-    var slideneg = '-80%';
-
-
-    $("#slide-nav").on("click", toggler, function (e) {
-
-      var selected = $(this).hasClass('slide-active');
-
-      $('#slidemenu').stop().animate({
-        left: selected ? menuneg : '0px'
-      });
-
-      $('#navbar-height-col').stop().animate({
-        left: selected ? slideneg : '0px'
-      });
-
-      $(pagewrapper).stop().animate({
-        left: selected ? '0px' : slidewidth
-      });
-
-      $(navigationwrapper).stop().animate({
-        left: selected ? '0px' : slidewidth
-      });
-
-
-      $(this).toggleClass('slide-active', !selected);
-      $('#slidemenu').toggleClass('slide-active');
-
-
-      $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
-
-
-    });
-
-
-    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
-
-
-    $(window).on("resize", function () {
-
-      if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
-        $(selected).removeClass('slide-active');
-      }
-
-
-    });
-
-
-
-
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function() {
+  initializePage();
 });
+
+/*
+ * Function that is called when the document is ready.
+ */
+function initializePage() {
+  // add any functionality and listeners you want here
+
+}
+
+$(document).ready(function(){
+  $('.spin').slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+}); 
 </script>
+
 </html>
