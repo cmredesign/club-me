@@ -46,7 +46,7 @@
           <ul class="nav navbar-nav">
             <li><a href="/">Profile</a></li>
             <li><a href="matchme">Match Me</a></li>
-            <li class="active"><a href="#">My Clubs</a></li>
+            <li><a href="#">My Clubs</a></li>
             <li><a href="search">Club Search</a></li>
             <li><a href="settings">Help</a></li>
         </div>
@@ -58,14 +58,17 @@
       <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
       <!-- p means paragraph -->
     </div>
+  
     
         <div class="styled">
-            <h2>Dance</h2>
+              <h2>Dance</h2>
           </div>
+          {{#each dance}}
           <div class='ind'>
-                <a href="nmotion"><img class="thumb" style="vertical-align:middle" src="images/nmotion.jpg">
-                <span class="drawerz" style="">[N] Motion</span></a>
+                <a href="{{url}}"><img class="thumb" style="vertical-align:middle" src="{{image}}">
+                <span class="drawerz" style="">{{name}}</span></a>
           </div>
+          {{/each}}
       <!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
       <!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
       <!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->

@@ -18,9 +18,12 @@ var update = require('./routes/update');
 var csignup = require('./routes/csignup');
 var isignup = require('./routes/isignup');
 var dance = require('./routes/dance');
+var ifc = require('./routes/ifc');
+var phc = require('./routes/phc');
 var ttv = require('./routes/ttv');
 var nmotion = require('./routes/nmotion');
 var indprofile = require('./routes/indprofile');
+var signup = require('./routes/signup');
 // Example route
 // var user = require('./routes/user');
 
@@ -60,6 +63,10 @@ app.get('/dance', dance.view);
 app.get('/ttv', ttv.view);
 app.get('/nmotion', nmotion.view);
 app.get('/indprofile', indprofile.view);
+app.get('/signup', signup.view);
+app.get('/ifc', ifc.view);
+app.get('/phc', phc.view);
+
 // Example route
 // app.get('/users', user.list);
 

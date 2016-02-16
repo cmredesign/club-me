@@ -1,0 +1,349 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Fira Sans";
+  font-weight: lighter;
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  html, body {
+    font-size: 50%;
+  }
+}
+
+svg {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  overflow: visible;
+}
+
+.svg-icon {
+  cursor: pointer;
+}
+.svg-icon path {
+  stroke: rgba(255, 255, 255, 0.9);
+  fill: none;
+  stroke-width: 1;
+}
+
+input, button {
+  outline: none;
+  border: none;
+}
+
+.cont {
+  position: relative;
+  height: 100%;
+  background-image: url("/images/geisel.jpg");
+  background-size: cover;
+  overflow: auto;
+  font-family: "Fira Sans";
+}
+
+.sign {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  opacity: 0.9;
+   background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.demo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -15rem;
+  margin-top: -26.5rem;
+  width: 30rem;
+  height: 53rem;
+  overflow: hidden;
+}
+
+.app {
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.3s cubic-bezier(0.68, -0.45, 0.465, 1.25);
+  transition: opacity 0.1s, -webkit-transform 0.3s cubic-bezier(0.68, -0.45, 0.465, 1.25);
+  transition: opacity 0.1s, transform 0.3s cubic-bezier(0.68, -0.45, 0.465, 1.25);
+  transition: opacity 0.1s, transform 0.3s cubic-bezier(0.68, -0.45, 0.465, 1.25), -webkit-transform 0.3s cubic-bezier(0.68, -0.45, 0.465, 1.25);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+   background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.app.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.app.active .app__user-photo {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.app.active .app__meeting {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.app.active .app__logout {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.app__top {
+  position: relative;
+  width: 30rem;
+  height: 53rem;
+  padding: 4rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.app__menu-btn {
+  position: absolute;
+  top: 2rem;
+  left: 1.5rem;
+  width: 1.8rem;
+  height: 1.7rem;
+  cursor: pointer;
+}
+.app__menu-btn span, .app__menu-btn:before, .app__menu-btn:after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+.app__menu-btn span {
+  top: 0.8rem;
+}
+.app__menu-btn:before {
+  content: "";
+  top: 0;
+}
+.app__menu-btn:after {
+  content: "";
+  bottom: 0;
+}
+.app__icon {
+  position: absolute;
+  top: 2rem;
+}
+
+.icon {
+  width: 50%;
+}
+.app__icon.search {
+  right: 1.5rem;
+  stroke-dasharray: 61.847137451171875;
+  stroke-dashoffset: 61.847137451171875;
+  -webkit-animation: animatePath 0.5s 0.5s forwards;
+          animation: animatePath 0.5s 0.5s forwards;
+}
+.app__hello {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+.app__user {
+  position: relative;
+  display: inline-block;
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 2rem;
+}
+.app__iconz {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.app__user-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.app__user-notif {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  line-height: 3rem;
+  text-align: center;
+  background: #50D2C2;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.app__logout {
+  float: right;
+  margin-bottom: 1.2rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  margin-right: 0.2rem;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: bottom 0.4s 0.1s, right 0.4s 0.1s, opacity 0.1s 0.7s, background-color 0.1s 0.7s, -webkit-transform 0.4s 0.4s;
+  transition: bottom 0.4s 0.1s, right 0.4s 0.1s, opacity 0.1s 0.7s, background-color 0.1s 0.7s, -webkit-transform 0.4s 0.4s;
+  transition: bottom 0.4s 0.1s, right 0.4s 0.1s, transform 0.4s 0.4s, opacity 0.1s 0.7s, background-color 0.1s 0.7s;
+  transition: bottom 0.4s 0.1s, right 0.4s 0.1s, transform 0.4s 0.4s, opacity 0.1s 0.7s, background-color 0.1s 0.7s, -webkit-transform 0.4s 0.4s;
+}
+.app__logout.clicked {
+  bottom: 50%;
+  right: 50%;
+  -webkit-transform: scale(30) !important;
+          transform: scale(30) !important;
+  opacity: 0.9;
+}
+.app__logout.clicked svg {
+  opacity: 0;
+}
+.app__logout-icon {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 128.8%;
+  left: 81.8%;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+.app__logout-icon path {
+  stroke-width: 4px;
+  stroke-dasharray: 64.36235046386719;
+  stroke-dashoffset: 64.36235046386719;
+  -webkit-animation: animatePath 0.5s 0.5s forwards;
+          animation: animatePath 0.5s 0.5s forwards;
+}
+
+.ripple {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  margin-left: -7.5rem;
+  margin-top: -7.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: animRipple 0.4s;
+          animation: animRipple 0.4s;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes animRipple {
+  to {
+    -webkit-transform: scale(3.5);
+            transform: scale(3.5);
+    opacity: 0;
+  }
+}
+
+@keyframes animRipple {
+  to {
+    -webkit-transform: scale(3.5);
+            transform: scale(3.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes animatePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes animatePath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.search {
+  background-color: transparent;
+  margin-top: 1.5rem;
+  height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 90%;
+}
+#categories {
+     font-size: 1.5rem;
+     font-family: "Fira Sans";
+     font-weight: lighter;
+     font-color: #fff;
+     text-align: center;
+     padding-bottom: 1rem;
+}
+
+.clicked {
+    background: #000;
+    opacity: 0.2;
+}
+
+.ind {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border: 10px #000;
+  margin: 0;
+  background: red;
+}
+
+.club {
+  position: absolute;
+  margin-left: 50%;
+  height: 100%;
+  background: black;
+  border: 10px #000;
+}
+
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+  margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+  /* Colors are in hexadecimal: http://www.colorpicker.com/ */  
+  color: #CC00AA;
+}
