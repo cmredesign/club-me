@@ -46,6 +46,23 @@ input, button {
   font-family: "Fira Sans";
 }
 
+.sign {
+  position: absolute;
+  width:100%;
+  height: 100%;
+  opacity: 0.9;
+   background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .demo {
   position: absolute;
   top: 50%;
@@ -81,9 +98,8 @@ input, button {
   font-family: "Fira Sans";
   position: absolute;
   top: 10rem;
-  left: 8.2rem;
-  width: 14rem;
-  height: 2.8rem;
+  left: 6.6rem;
+  font-size: 5rem;
 }
 .login__check:before {
   position: absolute;
@@ -138,6 +154,21 @@ input, button {
   width: 100%;
   height: 4rem;
   margin: 5rem 0 2.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: #000;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+  transition: width 0.3s 0.15s, font-size 0.1s 0.15s;
+}
+.create{
+  position: relative;
+  left: 7.5%;
+  width: 85%;
+  height: 4rem;
+  margin: 2.3rem 0 2.2rem;
   color: rgba(255, 255, 255, 0.8);
   background: #000;
   font-size: 1.5rem;
@@ -247,7 +278,7 @@ input, button {
   position: relative;
   width: 30rem;
   height: 53rem;
-  padding: 6rem 1.5rem 2rem;
+  padding: 4rem 1.5rem 2rem;
   text-align: center;
 }
 
@@ -301,9 +332,17 @@ input, button {
 .app__user {
   position: relative;
   display: inline-block;
-  width: 9rem;
-  height: 9rem;
+  width: 12rem;
+  height: 12rem;
   margin-bottom: 2rem;
+}
+.app__iconz {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  color: #fff;
 }
 .app__user-photo {
   width: 100%;
@@ -329,122 +368,13 @@ input, button {
   color: #fff;
   font-size: 1.5rem;
 }
-.app__month:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.app__month-name {
-  display: inline-block;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.app__month-btn {
-  display: inline-block;
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-left: none;
-  border-bottom: none;
-  cursor: pointer;
-}
-.app__month-btn.left {
-  float: left;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-}
-.app__month-btn.right {
-  float: right;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.app__days {
-  height: 7rem;
-  padding: 1.5rem 2rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-}
-.app__day {
-  width: 14%;
-  text-align: center;
-  font-size: 1.2rem;
-}
-.app__day.weekday {
-  color: #919197;
-  text-transform: uppercase;
-}
-.app__day.date {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #3C3C43;
-}
-.app__meeting {
-  position: relative;
-  height: 6rem;
-  border-top: 1px solid #EEEEEF;
-  padding: 1rem 2rem 1rem 7.5rem;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: transform 0.3s, opacity 0.3s;
-  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 0;
-}
-.app__meeting:nth-child(1) {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-.app__meeting:nth-child(2) {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-.app__meeting:nth-child(3) {
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-.app__meeting:nth-child(4) {
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
-}
-.app__meeting:nth-child(5) {
-  -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
-}
-.app__meeting-photo {
-  position: absolute;
-  left: 2rem;
-  top: 1rem;
-  width: 4rem;
-  height: 4rem;
-}
-.app__meeting-name {
-  color: #000;
-  font-size: 1.3rem;
-}
-.app__meeting-info {
-  color: #949498;
-  font-size: 1.1rem;
-}
 .app__logout {
-  position: absolute;
-  bottom: 3.3rem;
-  right: 3.3rem;
+  float: right;
+  margin-bottom: 1.2rem;
   width: 4.6rem;
   height: 4.6rem;
-  margin-right: -2.3rem;
-  margin-bottom: -2.3rem;
-  background: #FC3768;
+  margin-right: 0.2rem;
+  background: #000;
   color: #fff;
   font-size: 2rem;
   border-radius: 50%;
@@ -535,4 +465,52 @@ input, button {
   to {
     stroke-dashoffset: 0;
   }
+}
+.search {
+  background: transparent;
+  margin-top: 1.5rem;
+  height: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  line-height: 90%;
+}
+#categories {
+     font-size: 1.5rem;
+     font-family: "Fira Sans";
+     font-weight: lighter;
+     font-color: #fff;
+     text-align: center;
+     padding-bottom: 1rem;
+}
+
+.clicked {
+    background: #000;
+    opacity: 0.2;
+}
+
+.ind {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border: 10px #000;
+  margin: 0;
+  background: red;
+}
+
+.club {
+  position: absolute;
+  margin-left: 50%;
+  height: 100%;
+  background: black;
+  border: 10px #000;
+}
+
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+  margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+  /* Colors are in hexadecimal: http://www.colorpicker.com/ */  
+  color: #CC00AA;
 }

@@ -39,7 +39,50 @@ $(document).ready(function() {
       }, submitPhase2);
     }, submitPhase1);
   });
+
+   $(document).on("click", ".create", function(e) {
+    if (animating) return;
+    animating = true;
+    var that = this;
+    ripple($(that), e);
+    $(that).addClass("processing");
+    setTimeout(function() {
+      $(that).addClass("success");
+      setTimeout(function() {
+        $app.show();
+        $app.css("top");
+        $app.addClass("active");
+      }, submitPhase2 - 70);
+      setTimeout(function() {
+        $login.hide();
+        $login.addClass("inactive");
+        animating = false;
+        $(that).removeClass("success processing");
+      }, submitPhase2);
+    }, submitPhase1);
+  });
   
+   $(document).on("click", ".signup", function(e) {
+    if (animating) return;
+    animating = true;
+    var that = this;
+    $(that).addClass("processing");
+    setTimeout(function() {
+      $(that).addClass("success");
+      setTimeout(function() {
+        $sign.show();
+        $sign.css("top");
+        $sign.addClass("active");
+      }, submitPhase2 - 10);
+      setTimeout(function() {
+        $login.hide();
+        $login.addClass("inactive");
+        animating = false;
+        $(that).removeClass("success processing");
+      }, submitPhase2);
+    }, submitPhase1);
+  });
+
   $(document).on("click", ".app__logout", function(e) {
     if (animating) return;
     $(".ripple").remove();
@@ -58,5 +101,16 @@ $(document).ready(function() {
       $(that).removeClass("clicked");
     }, logoutPhase1);
   });
-  
+
+  document.getElementById("uploadBtn").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+
+
 });

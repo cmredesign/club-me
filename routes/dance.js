@@ -1,29 +1,7 @@
-
-/*
- * GET home page.
- */
+// Get all of our friend data
+var data = require('../dance.json');
 
 exports.view = function(req, res){
-   res.render('dance', {
-    'dance': [
-      { 'name': 'Match Me',
-        'image': 'match.png',
-        'id': 'project1'
-      },
-      { 'name': 'Search',
-        'image': 'search.png',
-        'id': 'project2'
-      },
-      { 'name': 'My Clubs',
-        'image': 'mine.png',
-        'id': 'project3'
-      },
-      { 'name': 'Update Profile',
-        'image': 'prof.png',
-        'id': 'project4'
-      },
-    ]
-  });
-}
-
-
+  console.log(data);
+  res.render('dance', data);
+};
