@@ -1,7 +1,9 @@
 // Get all of our friend data
-var data = require('../matchme.json');
+var data = require('../dance.json');
 
 exports.view = function(req, res){
+  
   console.log(data);
-  res.render('matchme', data);
-}
+  res.render('searchresults', data);
+};
+
