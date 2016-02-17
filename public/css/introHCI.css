@@ -1,3 +1,142 @@
+/* adjust body when menu is open */
+body.slide-active {
+    overflow-x: hidden
+}
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+    margin-top: 0px!important
+}
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+    position: relative;
+    padding-top: 70px;
+    left: 0;
+}
+#page-content.slide-active {
+    padding-top: 0
+}
+
+
+
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+    cursor: pointer;
+    position: relative;
+    line-height: 0;
+    float: left;
+    margin: 0;
+    width: 30px;
+    height: 40px;
+    padding: 10px 0 0 0;
+    border: 0;
+    background: transparent;
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+    background: orange
+}
+.navbar-header {
+    position: relative;
+}
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+    position: relative
+}
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width:767px) { 
+     #slide-nav .container {
+         margin: 0!important;
+         padding: 0!important;
+      height:100%;
+     }
+     #slide-nav .navbar-header {
+         margin: 0 auto;
+         padding: 0 15px;
+     }
+     #slide-nav .navbar.slide-active {
+         position: absolute;
+         width: 80%;
+         top: -1px;
+         z-index: 1000;
+     }
+     #slide-nav #slidemenu {
+         background: #f7f7f7;
+         left: -100%;
+         width: 80%;
+         min-width: 0;
+         position: absolute;
+         padding-left: 0;
+         z-index: 2;
+         top: 9.3px;
+         margin: 0;
+     }
+     #slide-nav #slidemenu .navbar-nav {
+         min-width: 0;
+         width: 100%;
+         margin: 0;
+     }
+     #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+         min-width: 0;
+         width: 80%;
+         white-space: normal;
+     }
+     #slide-nav {
+         border-top: 0
+     }
+     #slide-nav.navbar-inverse #slidemenu {
+         background: #333;
+     }
+     /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+     #navbar-height-col {
+         position: fixed;
+         top: 0;
+         height: 100%;
+         bottom:0;
+         width: 80%;
+         left: -80%;
+         background: #f7f7f7;
+     }
+     #navbar-height-col.inverse {
+         background: #333;
+         z-index: 1;
+         border: 0;
+     }
+     #slide-nav .navbar-form {
+         width: 100%;
+         margin: 8px 0;
+         text-align: center;
+         overflow: hidden;
+         /*fast clearfixer*/
+     }
+     #slide-nav .navbar-form .form-control {
+         text-align: center
+     }
+     #slide-nav .navbar-form .btn {
+         width: 100%
+     }
+}
+@media (min-width:768px) { 
+     #page-content {
+         left: 0!important
+     }
+     .navbar.navbar-fixed-top.slide-active {
+         position: fixed
+     }
+     .navbar-header {
+         left: 0!important
+     }
+}
+
+
+
+
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
 	margin-top: 2em;
@@ -10,38 +149,42 @@
 }
 
 body {
-background: rgba(41,28,2,1);
-background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
-background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
-font-family: "Fira Sans";
-font-weight: lighter;
+     background: rgba(41,28,2,1);
+     background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
+     background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
+     font-family: "Fira Sans";
+     font-weight: lighter;
 }
-#name {
-     font-size: 80px; 
-     display: inline-block;
+
+.container {
+     display: block;
      text-align: center;
 }
+
+#name {
+     font-size: 50px; 
+     display: block;
+}
+#info {
+     font-size: 1rem;
+     text-align: center;
+     display: block;
+}
+
 #profile {
      text-align: center;
      color: #FFFFFF;
-     font-family: "Fira Sans";
-     font-weight: normal;
      font-size: 50px;
 }
 
-.myInfo {
-     padding-bottom: 100px;
-     margin-left: 100px;
-     margin-bottom: 100px;
-}
 .jumbotron {
 	position: relative;
-     background: #000000;
+     background: #25231e;
 }
 
 .jumbotron:after {
@@ -55,34 +198,187 @@ font-weight: lighter;
      z-index: -1;	
 }
 
+#header {
+     display: inline-block;
+}
+
 #image {
-     width: 70%;
-     float: right;
+     padding-top: 30px;
+     width: 80%;
 }
 .name {
      list-style-type: none;
      font-size: 20px;
      color: #FFFFFF;
      font-family: "Fira Sans";
-     padding-top: 30px;
+     padding-top: 20px;
+}
+
+.icon {
+     width: 50%;
+     text-align: center;
+     display: block;
 }
 
 #categories {
-     font-size: 40px;
+     font-size: 2rem;
      font-family: "Fira Sans";
      font-weight: light;
      font-color: #fff;
+     text-align: center;
 }
 .thumbnail {
-     display: inline-block;
-}
-a.thumbnail {
-     text-decoration: none !important;
-}
-#help {
-     float: right;
-     width: 15%;
-     padding: 40px;
-     margin-right: -150px;
+     display: block;
 }
 
+.thumbnail:hover{
+     text-decoration: none !important;
+     
+}
+
+#help {
+     float: right;
+     width: 10%;
+     padding-bottom: 10px;
+}
+
+/* used to center icons */
+.vcenter {
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
+}
+
+#imaginary_container {
+     opacity: 0.8;
+     left: 15%;
+     top: 17%;
+     width: 82.5%;
+     position: absolute;
+}
+.stylish-input-group .input-group-addon{
+    background: white;
+    opacity: 0.2;
+}
+.stylish-input-group .form-control{
+     border-right:0; 
+     box-shadow:0 0 0; 
+     border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+.styled h2{
+     font-family: "Fira Sans";
+     font-weight: lighter;
+     margin-left: 30px;
+     margin-top: 5px;
+     margin-bottom: 20px;
+}
+.styled {
+    padding-right: 30px;
+}
+
+h4{
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+}
+
+.ind {
+     margin-bottom: 20px;
+}
+
+.thumb {
+     width: 10rem;
+     border: 1px solid #545154;
+     margin-left: 55px;
+}
+.drawerz {
+     font-size: 1.5rem;
+     margin-left: 10px;
+}
+
+.styled a {
+     text-decoration: none ! important;
+}
+
+
+.drawer-handle {
+     margin-left: -25px;
+     margin-right: 20px;
+     border-radius: 10px;
+     border: 1px solid #545154;
+     padding:10px;
+     background: rgba(33,33,33,1);
+background: -moz-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,33,33,1)), color-stop(12%, rgba(41,41,41,1)), color-stop(41%, rgba(46,46,46,1)), color-stop(66%, rgba(33,33,33,1)), color-stop(91%, rgba(13,13,13,1)), color-stop(100%, rgba(8,8,8,1)));
+background: -webkit-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -o-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: -ms-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+background: linear-gradient(to bottom, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#212121', endColorstr='#080808', GradientType=0 );
+}
+
+#search {
+     padding-right: 15px;
+     margin-top: 30px;
+}
+
+h3 {
+     font-size: 35px;
+     font-family: "Fira Sans";
+     font-weight: lighter;
+     font-color: #FFFFFF;
+     margin-left: 30px;
+     margin-top: 5px;
+     margin-bottom: 20px;
+}
+
+.checkbox {
+     margin-left: 130px;
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+     font-size: 20px;
+     padding: 10px;
+}
+
+.bio {
+     text-align: center;
+     display: block;
+     margin-top: 20px;
+     width: 300px;
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+     font-size: 18px;
+}
+
+.social {
+     float:left;
+     margin-left: 92px;
+}
+.icon {
+     width: 100px;
+     padding: 20px;
+     display: inline-block;
+}
+
+#update {
+    margin-top: 75px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#update h1 {
+     font-weight: lighter;
+     font-family: "Fira Sans"; 
+}
+
+#member {
+    width: 80%;
+}
+
+.add_field_button {
+    margin-left: -13rem;
+}

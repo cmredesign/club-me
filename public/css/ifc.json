@@ -1,0 +1,89 @@
+{
+	"dance": [
+		{
+			"name": "Alpha Epsilon Pi",
+			"image": "images/aepi.jpg",
+			"url": "nmotion"			
+		},
+		{
+			"name": "Alpha Lambda Mu",
+			"image": "alm.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"name": "Beta Theta Pi",
+			"image": "images/beta.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Kappa Sigma",
+			"image": "images/kappasig.png",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Lambda Chi Alpha",
+			"image": "images/lxa.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Phi Delta Theta",
+			"image": "images/phidelt.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Phi Gamma Delta",
+			"image": "images/fiji.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"					
+		},
+		{
+			"name": "Pi Kappa Alpha",
+			"image": "images/pike.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Sigma Alpha Epsilon",
+			"image": "images/sae.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"name": "Sigma Chi",
+			"image": "images/sigmachi.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Sigma Nu",
+			"image": "images/sigmanu.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Sigma Phi Epsilon",
+			"image": "images/sigep.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Tau Kappa Epsilon",
+			"image": "images/tke.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

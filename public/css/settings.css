@@ -1,77 +1,20 @@
 //* this style exists to make it obvious that you've successfully linked
    the CSS to the page. feel free to remove it once the link is working. */
 body {
-background: rgba(41,28,2,1);
-background: -moz-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,28,2,1)), color-stop(100%, rgba(27,54,109,1)));
-background: -webkit-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -o-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: -ms-linear-gradient(top, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-background: linear-gradient(to bottom, rgba(41,28,2,1) 0%, rgba(27,54,109,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#291c02', endColorstr='#1b366d', GradientType=0 );
-font-family: "Fira Sans";
-font-weight: lighter;
+     border: 1px dotted gray;
+     padding: 20px;
+     background-color: #1b366d;
+     font-family: "Fira Sans";
 }
 
 .settings p {
      margin-left: 10px;
      background-color: #deebf7;
-     font-size: 100px;
+     width: 500px;
      font-variant: small-caps;
 }
 
-.cmn-toggle {
-  position: absolute;
-  margin-left: -9999px;
-  visibility: hidden;
-}
-.cmn-toggle + label {
-  display: block;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-}
-
-input.cmn-toggle-round + label {
-  padding: 2px;
-  width: 120px;
-  height: 60px;
-  background-color: #dddddd;
-  border-radius: 60px;
-}
-input.cmn-toggle-round + label:before,
-input.cmn-toggle-round + label:after {
-  display: block;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  bottom: 1px;
-  content: "";
-}
-input.cmn-toggle-round + label:before {
-  right: 1px;
-  background-color: #f1f1f1;
-  border-radius: 60px;
-  transition: background 0.4s;
-}
-input.cmn-toggle-round + label:after {
-  width: 58px;
-  background-color: #fff;
-  border-radius: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: margin 0.4s;
-}
-input.cmn-toggle-round:checked + label:before {
-  background-color: #8ce196;
-}
-input.cmn-toggle-round:checked + label:after {
-  margin-left: 60px;
-}
-
-#help {
-     float: top;
-     width: 15%;
-     padding: 40px;
-     margin-left: 50px;
+.settings img {
+     width: 10px;
+     height: 10px;
 }
