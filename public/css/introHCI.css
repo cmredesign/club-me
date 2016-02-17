@@ -374,3 +374,11 @@ h3 {
      font-weight: lighter;
      font-family: "Fira Sans"; 
 }
+
+#member {
+    width: 80%;
+}
+
+.add_field_button {
+    margin-left: -13rem;
+}

@@ -106,12 +106,11 @@ $(document).ready(function() {
     document.getElementById("uploadFile").value = this.value;
 };
 
-$(".register-switch").on("click", function() {
-  var el = $(this);
-  el.text() == el.data("text-swap") 
-    ? el.text(el.data("text-original")) 
-    : el.text(el.data("text-swap"));
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
 });
 
-  
+
 });
