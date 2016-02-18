@@ -6,6 +6,8 @@ $(document).ready(function() {
       logoutPhase1 = 800,
       $login = $(".login"),
       $app = $(".app");
+      $clubapp = $(".clubapp");
+      $sign = $(".sign");
   
   function ripple(elem, e) {
     $(".ripple").remove();
@@ -54,6 +56,7 @@ $(document).ready(function() {
         $app.addClass("active");
       }, submitPhase2 - 70);
       setTimeout(function() {
+        $sign.hide();
         $login.hide();
         $login.addClass("inactive");
         animating = false;
@@ -61,6 +64,30 @@ $(document).ready(function() {
       }, submitPhase2);
     }, submitPhase1);
   });
+
+  $(document).on("click", ".createclub", function(e) {
+    if (animating) return;
+    animating = true;
+    var that = this;
+    ripple($(that), e);
+    $(that).addClass("processing");
+    setTimeout(function() {
+      $(that).addClass("success");
+      setTimeout(function() {
+        $clubapp.show();
+        $clubapp.css("top");
+        $clubapp.addClass("active");
+      }, submitPhase2 - 70);
+      setTimeout(function() {
+        $sign.hide();
+        $login.hide();
+        $login.addClass("inactive");
+        animating = false;
+        $(that).removeClass("success processing");
+      }, submitPhase2);
+    }, submitPhase1);
+  });
+  
   
    $(document).on("click", ".signup", function(e) {
     if (animating) return;
@@ -97,6 +124,7 @@ $(document).ready(function() {
     }, logoutPhase1 - 120);
     setTimeout(function() {
       $app.hide();
+      $clubapp.hide();
       animating = false;
       $(that).removeClass("clicked");
     }, logoutPhase1);
