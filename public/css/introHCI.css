@@ -382,3 +382,35 @@ h3 {
 .add_field_button {
     margin-left: -13rem;
 }
+
+.glyphicon.glyphicon-remove-sign, .glyphicon.glyphicon-thumbs-up  {
+    font-size: 3rem;
+}
+
+.glyphicon.glyphicon-minus {
+    font-size: 2rem;
+}
+
+
+#remove-slide {
+    width: 60px;
+    height:60px;
+    background: #ffba01;
+    border-radius: 20px;
+}
+
+#indifferent {
+    width: 40px;
+    height:40px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+#like {
+    width: 60px;
+    height:60px;
+    background: #5fd1d1;
+    border-radius: 20px;
+}
+
+

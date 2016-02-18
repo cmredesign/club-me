@@ -7,14 +7,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="//code.jquery.com/jquery.min.js"></script>
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+
   <link href="/css/introHCI.css" rel="stylesheet">
   <link href='https://code.cdn.mozilla.net/fonts/fira.css' rel='stylesheet' type='text/css' />
 
   <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
   <!-- Add the new slick-theme.css if you want the default styling-->
   <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
   <!-- this is a comment in HTML -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +50,7 @@
           </div>
           <div id="slidemenu">
             <ul class="nav navbar-nav">
-              <li><a href="/">Profile</a></li>
+              <li><a href="indprofile">Profile</a></li>
               <li class="active"><a href="#">Match Me</a></li>
               <li><a href="myclubs">My Clubs</a></li>
               <li><a href="search">Club Search</a></li>
@@ -84,13 +85,13 @@
           </div>
 
           <!-- Contextual button for informational alert messages -->
-          <button type="button" class="btn btn-danger" id="remove-slide">No</button>
+          <button class="glyphicon glyphicon-remove-sign" type="button" class="btn btn-danger" id="remove-slide" ></button>
 
           <!-- Indicates caution should be taken with this action -->
-          <button type="button" class="btn btn-warning">Maybe</button>
+          <button class="glyphicon glyphicon-minus" type="button" class="btn btn-warning" id="indifferent"></button>
 
           <!-- Indicates a dangerous or potentially negative action -->
-          <button type="button" class="btn btn-info">Yes</button>
+          <button class="glyphicon glyphicon-thumbs-up" type="button" class="btn btn-info" id="like"></button>
        </div>
     </div>
 
