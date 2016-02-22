@@ -1,5 +1,23 @@
 $(document).ready(function() {
+  initializePage();
+});
+
+function initializePage() {
+  // add any functionality and listeners you want here
   
+  $('#login').click(verifyLogin);
+}
+
+function verifyLogin(e)
+{
+  //
+
+  console.log("button works");
+}
+
+$(document).ready(function() {
+  
+  /* clean this up */
   var animating = false,
       submitPhase1 = 1100,
       submitPhase2 = 400,
@@ -8,6 +26,7 @@ $(document).ready(function() {
       $app = $(".app");
       $clubapp = $(".clubapp");
       $sign = $(".sign");
+
   
   function ripple(elem, e) {
     $(".ripple").remove();
@@ -19,27 +38,53 @@ $(document).ready(function() {
     $ripple.css({top: y, left: x});
     elem.append($ripple);
   };
+
   
   $(document).on("click", ".login__submit", function(e) {
-    if (animating) return;
-    animating = true;
+    
+    e.preventDefault();
+    var uname = $("input[name=username]").val();
+    var pw = $("input[name=password]").val();
     var that = this;
-    ripple($(that), e);
-    $(that).addClass("processing");
-    setTimeout(function() {
-      $(that).addClass("success");
+    
+    /* control structure to check signin */
+    valid = $.get("/json/users.json", function(data){
+      var users = data.users;
+      for(var n = 0; n < users.length; n++)
+      {
+        if((users[n].name == uname) && (users[n].password == pw)) {
+          animateSignIn();
+          return;
+        }
+        else {
+          $("#status").html("Invalid credentials. Please try again");
+        }
+      }
+    });
+
+    /* I have no idea what this does */
+    //if (animating) return;
+    //animating = true;
+    
+    /* object oriented animate signin fxn */
+    function animateSignIn() {
+      ripple($(that), e);
+      $(that).addClass("processing");
       setTimeout(function() {
-        $app.show();
-        $app.css("top");
-        $app.addClass("active");
-      }, submitPhase2 - 70);
-      setTimeout(function() {
-        $login.hide();
-        $login.addClass("inactive");
-        animating = false;
-        $(that).removeClass("success processing");
-      }, submitPhase2);
-    }, submitPhase1);
+        $(that).addClass("success");
+        setTimeout(function() {
+          $app.show();
+          $app.css("top");
+          $app.addClass("active");
+        }, submitPhase2 - 70);
+        setTimeout(function() {
+          $login.hide();
+          $login.addClass("inactive");
+          animating = false;
+          $(that).removeClass("success processing");
+        }, submitPhase2);
+      }, submitPhase1);
+    };
   });
 
    $(document).on("click", ".create", function(e) {
@@ -138,6 +183,8 @@ $(document).ready(function(){
     $(".nav-tabs a").click(function(){
         $(this).tab('show');
     });
+
+
 });
 
 

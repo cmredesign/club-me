@@ -10,13 +10,19 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// add any functionality and listeners you want here
-
+  $("#like").unbind().click(likeClick);
+  $('#remove-slide').unbind().click(removeClick);
 }
 
+var added = [];
+for(var n = 0; n < 7; n++) {
+  added[n] = false;
+}
 
 var $status = $('.pagingInfo');
 var $slickElement = $('.spin');
 var first = true;
+var currentSlide = 0;
 
 $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
@@ -34,7 +40,16 @@ $('.spin').slick({
 });
 
 
-$('#remove-slide').on('click', function() {
+function removeClick(e) {
+    e.preventDefault();
+
+    removeCurrSlide();
+    
+};
+
+function removeCurrSlide() {
+  var ind = $("div.slick-active").attr("data-slick-index");
+    console.log("Removed slide #" + ind);
     if(first) {
     var i = $("div.slick-active").attr("data-slick-index");
     //console.log("clicked 'No' on: " + i);
@@ -58,6 +73,25 @@ $('#remove-slide').on('click', function() {
        $(this).attr("data-slick-index",j);
        j++;
     });
-
   }
-});
+}
+
+
+function likeClick(e) {
+  console.log("Like button clicked");
+  // Cancel the default action, which prevents the page from reloading
+  e.preventDefault();
+  //var ind = $("div.slick-active").attr("data-slick-index");
+  var ind = $("div.slick-active span").attr("id");
+  $.getJSON("json/matchme.json", function(data) {
+    console.log("ind: " + ind);
+    //console.log(data.match[ind]["name"] + ": " + data.match[ind]["matched"])
+    if(added[ind] == false) {
+      var toAdd = data.match[ind]["name"];
+      $(".bookmarked").append("<li>" + toAdd +"</li>");
+      added[ind] = true;
+      removeCurrSlide();
+    }
+    
+  });
+}
