@@ -53,7 +53,7 @@
               <li><a href="indprofile">Profile</a></li>
               <li class="active"><a href="#">Match Me</a></li>
               <li><a href="myclubs">My Clubs</a></li>
-              <li><a href="search">Club Search</a></li>
+              <li><a href="search">Categories</a></li>
               <li><a href="settings">Help</a></li>
             </div>
           </div>
@@ -75,28 +75,31 @@
         <div>
           <h1>your content3</h1>
         </div>-->
-            {{#each match}}
-            <div>
-              <img class="img-responsive" src="{{image}}">
-              <span>{{name}}</span>
+          {{#each match}}
+          <div>
+              <img style="width:300px; height:250px; padding-bottom:2rem" class="img-responsive" src="{{image}}">
+              <span id={{@index}}><p style="font-size:2.2rem">{{name}}</p></span>
 
             </div>
             {{/each}}
           </div>
 
-          <!-- Contextual button for informational alert messages -->
+         <div id="yesno"> <!-- Contextual button for informational alert messages -->
           <button class="glyphicon glyphicon-remove-sign" type="button" class="btn btn-danger" id="remove-slide" ></button>
-
-          <!-- Indicates caution should be taken with this action -->
-          <button class="glyphicon glyphicon-minus" type="button" class="btn btn-warning" id="indifferent"></button>
 
           <!-- Indicates a dangerous or potentially negative action -->
           <button class="glyphicon glyphicon-thumbs-up" type="button" class="btn btn-info" id="like"></button>
+        </div>
        </div>
+    
+    <div style="display:none" id="bookmarked">
+      <h2>Bookmarked</h2>
+      <ul class="bookmarked">
+      </ul>
     </div>
 
+    </div>
 
-  <p><a href="/">Back &raquo;</a></p>
 </div>
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

@@ -171,7 +171,8 @@ body {
      display: block;
 }
 #info {
-     font-size: 1rem;
+     padding-bottom: 1.2rem;
+     font-size: 2rem;
      text-align: center;
      display: block;
 }
