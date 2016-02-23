@@ -14,8 +14,9 @@ function initializePage() {
   $('#remove-slide').unbind().click(removeClick);
 }
 
+var counter = 8;
 var added = [];
-for(var n = 0; n < 7; n++) {
+for(var n = 0; n < counter; n++) {
   added[n] = false;
 }
 
@@ -74,8 +75,16 @@ function removeCurrSlide() {
        j++;
     });
   }
+  counter--;
+  if(counter == 0) {
+    showBookmarked();
+  }
 }
 
+function showBookmarked() {
+  $("#bookmarked").css("display", "");
+  $("#yesno").css("display", "none");
+}
 
 function likeClick(e) {
   console.log("Like button clicked");
@@ -87,8 +96,8 @@ function likeClick(e) {
     console.log("ind: " + ind);
     //console.log(data.match[ind]["name"] + ": " + data.match[ind]["matched"])
     if(added[ind] == false) {
-      var toAdd = data.match[ind]["name"];
-      $(".bookmarked").append("<li>" + toAdd +"</li>");
+      var toAdd = "<a href='" + + data.match[ind]["url"] + "'>" + "<img style='width:150px; padding:1rem; text-align:center; display:block' class='img-responsive' src='" + data.match[ind]["image2"] + "''></a>";
+      $(".bookmarked").append("<div>" + toAdd +"</div>");
       added[ind] = true;
       removeCurrSlide();
     }

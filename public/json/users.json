@@ -1,15 +1,15 @@
 {
 	"users": [
 		{
-			"name": "abc",
-			"password": "abc"
+			"name": "johndoe@ucsd.edu",
+			"password": "password"
 		},
 		{
-			"name": "gg",
+			"name": "gg@ucsd.edu",
 			"password": "gg"
 		},
 		{
-			"name": "xyz",
+			"name": "xyz@ucsd.edu",
 			"password": "xyz"
 		}
 	]

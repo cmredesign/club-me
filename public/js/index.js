@@ -57,13 +57,14 @@ $(document).ready(function() {
           return;
         }
         else {
-          $("#status").html("Invalid credentials. Please try again");
+          $("#status").html("Invalid credentials. Please try again.");
+          $("#status").css("padding-top", "1.6rem");
         }
       }
     });
 
     /* I have no idea what this does */
-    //if (animating) return;
+    //if (animating) return
     //animating = true;
     
     /* object oriented animate signin fxn */
