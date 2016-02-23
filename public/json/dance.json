@@ -1,0 +1,124 @@
+{
+	"dance": [
+		{
+			"name": "[N]Motion",
+			"image": "images/nmotion.jpg",
+			"url": "clubs/dance",
+			"info": "Dance Team",
+			"description": "[N]Motion is UCSD NSU's modern/hiphop dance team. It was founded by NSU members Julie Zhan and Drew Vo, who had a dream of making a dance team for the Nikkei Student Union. This dream came true with the help of dancer and choreographer Abe Chung of 220. The 14 members of the very first [N]Motion team debuted at NSU's 2009 Culture Show and has since gained recognition from a number of different organizations. Keep a look out for [N]Motion's other performances throughout the year, including Fusion Kick-Off, NSU/JSA Matsuri, and more!"		
+
+		},
+		{
+			"name": "4N01",
+			"image": "images/4no1.jpg",
+			"url": "clubs/dance",
+			"info": "Dance Team",
+			"description": "4N01"
+		},
+		{
+			"name": "Argentine Tango Club",
+			"image": "images/argtango.jpg",
+			"url": "club"			
+		},
+		{
+			"name": "Ascension",
+			"image": "images/ascension.png",
+			"url": "club"		
+		},
+		{
+			"name": "Ballet Folklorico",
+			"image": "images/folklorico.jpg",
+			"url": "club"	
+		},
+		{
+			"name": "Body Rock",
+			"image": "images/bodyrock.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Chinese Dance Association",
+			"image": "images/cda.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"					
+		},
+		{
+			"name": "Da Real Punjabiz",
+			"image": "images/drp.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Finesse Dance Company",
+			"image": "images/finesse.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"name": "Kidz Next Door",
+			"image": "images/knd.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "KOTX",
+			"image": "images/kotx.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Poptikz",
+			"image": "images/poptikz.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Pushpanjali",
+			"image": "images/pushp.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Raas Ruckus",
+			"image": "images/raas.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Salsa Club",
+			"image": "images/salsa.png",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"name": "Sleepless Collective",
+			"image": "images/sleepless.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Swing Club",
+			"image": "images/swing.png",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Triton Twirl Flag Squad",
+			"image": "images/twirl.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		},
+		{
+			"name": "Zor",
+			"image": "images/zor.jpg",
+			"url": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"		
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
