@@ -1,43 +1,10 @@
-
-/*
- * GET home page.
- */
+var data = require('../public/json/dance.json');
 
 exports.view = function(req, res){
-   res.render('club', {
-    'club': [
-      { 'name': '[N]Motion',
-        'image': 'lorempixel.people.1.jpeg',
-        'id': 'project1'
-      },
-      { 'name': 'Dance',
-        'image': 'lorempixel.city.1.jpeg',
-        'id': 'project2'
-      },
-      { 'name': 'Prototyping',
-        'image': 'lorempixel.technics.1.jpeg',
-        'id': 'project3'
-      },
-      { 'name': 'Heuristic Evaluation',
-        'image': 'lorempixel.abstract.1.jpeg',
-        'id': 'project4'
-      },
-      { 'name': 'Visualization',
-        'image': 'lorempixel.abstract.8.jpeg',
-        'id': 'project5'
-      },
-      { 'name': 'Social design',
-        'image': 'lorempixel.people.2.jpeg',
-        'id': 'project6'
-      },
-      { 'name': 'Gestural interaction',
-        'image': 'lorempixel.technics.2.jpeg',
-        'id': 'project7'
-      },
-      { 'name': 'Design tools',
-        'image': 'lorempixel.city.2.jpeg',
-        'id': 'project8'
-      }
-    ]
-  });
+  var id = req.params.id;
+  console.log("id:" + data.dance[id].description);
+  var jsonKey = data.dance[id];
+  var baseUrl = req.protocol + '://' + req.get('host');
+  console.log(baseUrl);
+   res.render('club', {"jsonKey":jsonKey, "baseUrl": baseUrl});
 }

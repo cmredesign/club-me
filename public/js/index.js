@@ -56,11 +56,9 @@ $(document).ready(function() {
           animateSignIn();
           return;
         }
-        else {
-          $("#status").html("Invalid credentials. Please try again.");
-          $("#status").css("padding-top", "1.6rem");
-        }
       }
+      $("#status").html("Invalid credentials. Please try again.");
+      $("#status").css("padding-top", "1.6rem");
     });
 
     /* I have no idea what this does */
