@@ -70,6 +70,7 @@ app.get('/signup', signup.view);
 app.get('/ifc', ifc.view);
 app.get('/phc', phc.view);
 app.get('/club', club.view);
+app.get('/clubs/dance/:name', club.view);
 
 app.get('/searchresults', searchresults.view);
 
