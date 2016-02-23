@@ -75,10 +75,10 @@
         <div>
           <h1>your content3</h1>
         </div>-->
-            {{#each match}}
-            <div>
+          {{#each match}}
+          <div>
               <img class="img-responsive" src="{{image}}">
-              <span>{{name}}</span>
+              <span id={{@index}}>{{name}}</span>
 
             </div>
             {{/each}}
@@ -93,6 +93,13 @@
           <!-- Indicates a dangerous or potentially negative action -->
           <button class="glyphicon glyphicon-thumbs-up" type="button" class="btn btn-info" id="like"></button>
        </div>
+    
+    <div>
+      <h2>Bookmarked</h2>
+      <ul class="bookmarked">
+      </ul>
+    </div>
+
     </div>
 
 
