@@ -1,7 +1,7 @@
 /* source: http://jsbin.com/OjOTIGaP/1/edit?html,js,output */
 
 $(document).ready(function () {
-
+  /*
     var sbar = '<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">'+
         '<div class="container">'+
           '<div class="navbar-header">'+
@@ -35,6 +35,7 @@ $(document).ready(function () {
         '<div id="page-content"></div>'+
         '<span class="pagingInfo"></span>';
     $("body").prepend(sbar);
+    */
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
     
