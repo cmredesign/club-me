@@ -167,14 +167,20 @@ body {
 }
 
 #name {
-     font-size: 50px; 
+     margin-top: 2rem;
+     font-size: 3rem; 
      display: block;
 }
 #info {
-     padding-bottom: 1.2rem;
-     font-size: 2rem;
+     font-size: 1.5rem;
      text-align: center;
      display: block;
+}
+
+#descrip {
+    padding: 1.2rem;
+    text-align: left;
+    text-indent: 2rem;
 }
 
 #profile {
@@ -297,7 +303,7 @@ h4{
      margin-left: 55px;
 }
 .drawerz {
-     font-size: 1.5rem;
+     font-size: 1.2rem;
      margin-left: 10px;
 }
 
@@ -307,11 +313,12 @@ h4{
 
 
 .drawer-handle {
+     text-align: center;
      margin-left: -25px;
      margin-right: 20px;
-     border-radius: 10px;
      border: 1px solid #545154;
      padding:10px;
+     opacity: 0.8;
      background: rgba(33,33,33,1);
 background: -moz-linear-gradient(top, rgba(33,33,33,1) 0%, rgba(41,41,41,1) 12%, rgba(46,46,46,1) 41%, rgba(33,33,33,1) 66%, rgba(13,13,13,1) 91%, rgba(8,8,8,1) 100%);
 background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(33,33,33,1)), color-stop(12%, rgba(41,41,41,1)), color-stop(41%, rgba(46,46,46,1)), color-stop(66%, rgba(33,33,33,1)), color-stop(91%, rgba(13,13,13,1)), color-stop(100%, rgba(8,8,8,1)));
