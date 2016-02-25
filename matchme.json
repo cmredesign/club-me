@@ -4,14 +4,14 @@
 			"name": "Salsa Dancing",
 			"image": "http://impact89fm.org/wp-content/uploads/2014/02/New-Top-Salsa-Songs-2013-List.jpeg",
 			"image2": "images/salsa.png",
-			"url": "nmotion",		
+			"url": "clubs/dance/salsaclub",		
 			"matched": "false"
 		},
 		{
 			"name": "Fashion",
 			"image": "http://www.paleoforwomen.com/wp-content/uploads/2014/03/modelsonrunway1.jpg",
 			"image2": "https://scontent-sjc2-1.xx.fbcdn.net/hphotos-frc3/v/t1.0-9/10945013_771370632917543_4898282730106878544_n.jpg?oh=309ed882149bd1d0265c917b32ba471f&oe=57585DE8",
-			"url": "nmotion",			
+			"url": "ttv",			
 			"matched": "false"		
 		},
 		{
