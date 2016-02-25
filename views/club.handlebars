@@ -65,20 +65,30 @@
           <img class="img-responsive" id ="image" src="{{baseUrl}}/{{jsonKey.image}}"/></div>
           <p id="name">{{jsonKey.name}}</p>
           <p id="info">{{jsonKey.info}}</p>
-          <div><p>{{jsonKey.description}}</p></div>
+          <div><p id="descrip">{{jsonKey.description}}</p></div>
           <div>
         <a href="https://www.facebook.com/NMotion-355529240024/">
         <img class ="icon" src="{{baseUrl}}/images/facebook.png"/></a>
         <a href="http://www.youtube.com/user/ucsdnmotion">
         <img class ="icon"src="{{baseUrl}}/images/youtube.png"/>
-        </a></div>
+        </a>
+        <a href="search"></a>
+      </div>
       </div>
 
-      
+        <a href="#" id="button">
+      <span>Bookmark Club</span>
+      </a>
       
     
 </div>
 </body>
-
+<script>
+   $document.getElementById('button').onclick = (function() {
+    e.preventDefault();
+    document.getElementsByTagName('span')[0].innerHTML = 'Success!';
+    return false;
+});
+</script>
 <script src="/js/searchbar.js"></script>
 </html>
