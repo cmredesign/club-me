@@ -3,17 +3,19 @@
 $(document).ready(function () {
 
   var sbar = 
-    '<div id="bottomnav">'+
-      '<div id=>'+
-      '<ul class>'+
-        '<li><a href="/indprofile">Profile</a></li>'+
-        '<li class="/active"><a href="#">Match Me</a></li>'+
-        '<li><a href="/myclubs">My Clubs</a></li>'+
-        '<li><a href="/search">Club Search</a></li>'+
-        '<li><a href="/settings">Help</a></li>'+
-      '</ul>'+
-      '</div>'+
-    '</div>';
+   '<nav id="navbar" class="navbar navbar-inverse navbar-fixed-bottom">' +
+  '<div class="container-fluid">' +
+   '<div class="navbar-header">' +
+    '</div>' +
+    '<ul class="list-inline" class="nav navbar-nav" class="navi">' +
+      '<li  style="display:inline"><a href="/indprofile">Profile</a></li>'+
+      '<li  style="display:inline"><a href="/myclubs">My Clubs</a></li>'+
+      '<li  style="display:inline"><a href="/matchme">Match Me</a></li>'+
+      '<li  style="display:inline" class="active"><a href="/search">Categories</a></li>'+
+      '<li  style="display:inline"><a href="/#">Logout</a></li>'+ 
+    '</ul>'+
+  '</div>' +
+'</nav>';
 
     console.log(sbar);
 
