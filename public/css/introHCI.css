@@ -37,7 +37,7 @@ ul li.first {
 }
 
 #navbar {
-    background-color: #6475a0;
+    background-color: #2d2315;
 }
 
 body {
@@ -65,6 +65,7 @@ body {
 }
 #info {
      font-size: 1.5rem;
+     font-weight: normal;
      text-align: center;
      display: block;
 }
@@ -264,10 +265,12 @@ h3 {
      display: inline-block;
 }
 
-#update {
-    margin-top: 75px;
+#update, #categories, #dance, #mine {
+    overflow: scroll;
+    margin-top: 3rem;
     margin-left: 25px;
     margin-right: 25px;
+    padding-bottom: 4rem;
 }
 
 #update h1 {
@@ -323,6 +326,9 @@ body {
     text-align: center;
 }
 
+.bookmark {
+    padding-bottom: 6rem;
+}
 #button {
     display: inline-block;
     -webkit-border-radius: 8px;

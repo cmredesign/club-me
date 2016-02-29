@@ -45,26 +45,15 @@
         </a></div>
   		</div>
 
+     <div class="bookmark">  
      <a href="#" id="button">
       <span>Bookmark Club</span>
       </a>
+    </div>
 
       
       
     
 </div>
-</body>
-
-<!--Figure out a better way to abstract this -->
-<!--It's JQuery that should go into it's own .js-->
-<script>
-
-$(document).ready(function() {
-    document.getElementById('button').onclick = (function() {
-    document.getElementsByTagName('span')[0].innerHTML = 'Success!';
-    return false;
-  }
-});
-</script>
 <script src="/js/searchbar.js"></script>
 </html>
