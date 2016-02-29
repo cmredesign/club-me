@@ -1,30 +1,43 @@
-/* adjust body when menu is open */
-body.slide-active {
-    overflow-x: hidden
-}
-/*first child of #page-content so it doesn't shift around*/
-.no-margin-top {
-    margin-top: 0px!important
-}
-/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
-#page-content {
-    position: relative;
-    padding-top: 70px;
-    left: 0;
-}
-#page-content.slide-active {
-    padding-top: 0
+ul {      
+    margin:0;     
+    padding:0;     
+    list-style:none 
+} 
+
+ul li a, ul li span {  
+    display: block;
+} 
+
+ul li span {   
+    height:30px;/* height and width of icon  */     
+    width:30px;/*   "  " */
+    background-image: url("images/prof.png");
+    margin:auto;      
+} 
+
+ul li { 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    width: 7.5rem;    
+    float:left;     
+
+} 
+
+ul li a {     
+    text-decoration:none;     
+    padding:0  10px; 
+} 
+
+ul li.first { 
+    border-left: 1px solid #999; 
+} 
+
+.link {
+    width: 95%;
 }
 
 #navbar {
-    bottom: ;
-}
-.navbar-header li{
-    padding: 2rem;
-}
-
-.navi {
-   padding-top: 5rem;
+    background-color: #6475a0;
 }
 
 body {
