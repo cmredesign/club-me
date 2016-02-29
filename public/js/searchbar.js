@@ -3,19 +3,14 @@
 $(document).ready(function () {
 
   var sbar = 
-   '<nav id="navbar" class="navbar navbar-inverse navbar-fixed-bottom">' +
-  '<div class="container-fluid">' +
-   '<div class="navbar-header">' +
-    '</div>' +
-    '<ul class="list-inline" class="nav navbar-nav" class="navi">' +
-      '<li  style="display:inline"><a href="/indprofile">Profile</a></li>'+
-      '<li  style="display:inline"><a href="/myclubs">My Clubs</a></li>'+
-      '<li  style="display:inline"><a href="/matchme">Match Me</a></li>'+
-      '<li  style="display:inline" class="active"><a href="/search">Categories</a></li>'+
-      '<li  style="display:inline"><a href="/#">Logout</a></li>'+ 
-    '</ul>'+
-  '</div>' +
-'</nav>';
+   '<nav id="navbar" class="navbar-fixed-bottom">' +
+  '<ul>' +
+    '<li><a href="/indprofile"><span><img class="link" src="images/prof.png"/></span>Profile</a></li>' +
+    '<li><a href="/myclubs"><span><img class="link" src="images/roster.png"/></span>My Clubs</a></li>' +
+      '<li><a href="/matchme"><span><img class="link" src="images/match.png"/></span>clubMe</a></li>' +
+        '<li><a href="/search"><span><img class="link" src="images/search.png"/></span>Categories</a></li>' +
+          '<li><a href="/#"><span><img class="link" src="images/logout.png"/></span>Logout</a></li>' +
+'</ul>';
 
     console.log(sbar);
 
