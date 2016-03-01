@@ -52,9 +52,70 @@
               <input type="name" class="register-input" placeholder="Name">
               <input type="email" class="register-input" placeholder="Email address">
               <input type="password" class="register-input" placeholder="Password">
-              <input type="college" class="register-input" placeholder="College">
-              <input type="major" class="register-input" placeholder="Major">
-              <input type="grade" class="register-input" placeholder="Grade Level">
+              <select>
+                  <option value="all">College</option>
+                  <option value="SLTA">Revelle</option>
+                  <option value="Diploma">Muir</option>
+                  <option value="Bachelor">Marshall</option>
+                  <option value="Master">Warren</option>
+                  <option value="Master">ERC</option>
+                  <option value="Master">Warren</option>
+              </select>
+              <select>
+                  <option value="all">Major</option>
+                  <option value="all">Anthropology</option>
+                  <option value="SLTA">Bioengineering</option>
+                  <option value="Diploma">Biological Sciences</option>
+                  <option value="Bachelor">Chemistry and Biochemistry</option>
+                  <option value="Master">Chinese Studies</option>
+                  <option value="Master">Classical Studies</option>
+                  <option value="all">Cognitive Science</option>
+                  <option value="SLTA">Commmunication</option>
+                  <option value="Diploma">Computer Science & Engineering</option>
+                  <option value="Bachelor">Critical Gender Studies</option>
+                  <option value="Master">Dance</option>
+                  <option value="Master">Economics</option>
+                  <option value="all">Electrical & Computer Engineering</option>
+                  <option value="SLTA">Engineering</option>
+                  <option value="Diploma">Environmental Systems</option>
+                  <option value="Bachelor">Ethnic Studies</option>
+                  <option value="Master">Family & Preventive Medicine</option>
+                  <option value="Master">German Studies</option>
+                  <option value="all">Global Health</option>
+                  <option value="SLTA">History</option>
+                  <option value="Diploma">Human Development</option>
+                  <option value="Bachelor">International Studies</option>
+                  <option value="Master">Italian Studies</option>
+                  <option value="Master">Japanese Studies</option>
+                  <option value="all">Latin American Studies</option>
+                  <option value="SLTA">Linguistics</option>
+                  <option value="Diploma">Literature</option>
+                  <option value="Bachelor">Mathematics</option>
+                  <option value="Master">Mechanical and Aerospace Engineering</option>
+                  <option value="Master">Music</option>
+                  <option value="all">Nanoengineering</option>
+                  <option value="SLTA">Philosophy</option>
+                  <option value="Diploma">Physics</option>
+                  <option value="Bachelor">Political Science</option>
+                  <option value="Master">Psychology</option>
+                  <option value="Master">Public Health</option>
+                  <option value="all">Russian, East European & Eurasian Studies</option>
+                  <option value="SLTA">Scripps Institution of Oceanography</option>
+                  <option value="Diploma">Sociology</option>
+                  <option value="Bachelor">Structural Engineering</option>
+                  <option value="Master">Theatre</option>
+                  <option value="Master">Third World Studies</option>
+                  <option value="all">Urban Studies and Planning</option>
+                  <option value="SLTA">Visual Arts</option>
+              </select>
+                 <select>
+                  <option value="all">Grade Level</option>
+                  <option value="SLTA">1st</option>
+                  <option value="Diploma">2nd</option>
+                  <option value="Bachelor">3rd</option>
+                  <option value="Master">4th</option>
+                  <option value="Master">Other</option>
+              </select>
 
               <div style="margin-left: 21%" class="fileUpload btn btn-primary">
                 <span>Upload Profile Image</span>
@@ -63,10 +124,31 @@
               <button type="button" class="create">Create Account</button>
             </div>
             <div class="tab-pane" id="tab_b">
-
-              <input type="name" class="register-input" placeholder="Org Title">
               <input type="email" class="register-input" placeholder="Org Email">
               <input type="password" class="register-input" placeholder="Password">
+              <input type="name" class="register-input" placeholder="Org Title">
+              <select>
+                  <option value="all">Org Category</option>
+                  <option value="SLTA">Academic</option>
+                  <option value="Diploma">Co-Ops/Enterprise</option>
+                  <option value="Bachelor">Cultural</option>
+                  <option value="Master">Dance</option>
+                  <option value="Master">Educational</option>
+                  <option value="all">Health Professions</option>
+                  <option value="SLTA">Interfraternity Council</option>
+                  <option value="Diploma">Martial Arts</option>
+                  <option value="Bachelor">Media</option>
+                  <option value="Master">Multi-Cultural Greek Council (MCG) - Fraternity</option>
+                  <option value="Master">Multi-Cultural Greek Council (MCG) - Sorority</option>
+                  <option value="all">Panhellenic</option>
+                  <option value="SLTA">Political</option>
+                  <option value="Diploma">Pre-Professional</option>
+                  <option value="Bachelor">Recreation</option>
+                  <option value="Master">Service</option>
+                  <option value="Master">Social</option>
+                  <option value="Master">Spiritual</option>
+                  <option value="Master">Student Affirmative Action Committee(SAAC)</option>
+              </select>
               <div style="margin-left: 25%" class="fileUpload btn btn-primary">
                 <span>Upload Club Logo</span>
                 <input type="file" class="upload" />
@@ -114,12 +196,6 @@
         </div>
       </div>
       <div class="clubapp">
-        <form>
-          <div class="search">
-            <input type="text" class="login__input name" placeholder="Search"/>
-            <span style="float:right; margin-right:15px; opacity: 0.7" class="glyphicon glyphicon-search"></span>
-          </div>
-        </form>
         <div class="app__top">
           <div class="app__user">
             <img src="images/nmotion.jpg"alt="" class="app__user-photo" />
@@ -135,7 +211,7 @@
             <p id="categories" class="text-center">Roster</p>
           </a>
            <a href="messages">
-            <img class="app__iconz" src="images/messages.png"/>
+            <img class="app__iconz" src="images/message.png"/>
             <p id="categories" class="text-center">Messages</p>
           </a>
           <a href="update">
