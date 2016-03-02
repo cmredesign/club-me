@@ -39,6 +39,7 @@
     border-left: 1px solid #999; 
 } 
 
+
 .link {
     width: 95%;
 }
@@ -177,6 +178,9 @@ body {
     background:transparent;
 }
 
+.styled {
+  margin:0 auto;
+}
 .styled h2{
      font-family: "Fira Sans";
      font-weight: normal;
@@ -205,12 +209,13 @@ h4{
 .styled a {
      text-decoration: none ! important;
 }
-
-
+.drawers-wrapper {
+  padding-bottom: 2rem;
+  margin-left: 18px;
+  width: 88%;
+}
 .drawer-handle {
      text-align: center;
-     margin-left: -25px;
-     margin-right: 20px;
      border: 1px solid #545154;
      padding:10px;
      opacity: 0.8;
