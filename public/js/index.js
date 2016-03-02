@@ -66,7 +66,7 @@ $(document).ready(function() {
     //animating = true;
     
     /* object oriented animate signin fxn */
-    function animateSignIn() {
+    /*function animateSignIn() {
       ripple($(that), e);
       $(that).addClass("processing");
       setTimeout(function() {

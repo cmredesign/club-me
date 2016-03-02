@@ -8,11 +8,7 @@ $(document).ready(function () {
     '<li><a href="/indprofile"><span><img class="link" src="/images/prof.png"/></span>Profile</a></li>' +
     '<li><a href="/myclubs"><span><img class="link" src="/images/roster.png"/></span>My Clubs</a></li>' +
       '<li><a href="/matchme"><span><img class="link" src="/images/match.png"/></span>clubMe</a></li>' +
-<<<<<<< HEAD
         '<li><a href="/categories"><span><img class="link" src="/images/search.png"/></span>Categories</a></li>' +
-=======
-        '<li><a href="/search"><span><img class="link" src="/images/search.png"/></span>Categories</a></li>' +
->>>>>>> a43113fe9b7413a1457e059349566384a86d1f5a
           '<li><a href="/#"><span><img class="link" src="/images/logout.png"/></span>Logout</a></li>' +
 '</ul>';
 
