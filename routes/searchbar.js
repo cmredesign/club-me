@@ -2,6 +2,22 @@
 
 $(document).ready(function () {
 
+  var sbar = 
+   '<nav id="navbar" class="navbar-fixed-bottom">' +
+  '<ul id="navlist">' +
+    '<li><a href="/indprofile"><span><img class="link" src="/images/prof.png"/></span>Profile</a></li>' +
+    '<li><a href="/myclubs"><span><img class="link" src="/images/roster.png"/></span>My Clubs</a></li>' +
+      '<li><a href="/matchme"><span><img class="link" src="/images/match.png"/></span>clubMe</a></li>' +
+
+        '<li><a href="/categories"><span><img class="link" src="/images/search.png"/></span>Categories</a></li>' +
+
+          '<li><a href="/#"><span><img class="link" src="/images/logout.png"/></span>Logout</a></li>' +
+'</ul>';
+
+    console.log(sbar);
+
+    $("body").prepend(sbar);
+
 
     //stick in the fixed 100% height behind the navbar but don't wrap it
     $('#slide-nav.navbar-inverse').after($('<div class="inverse" id="navbar-height-col"></div>'));
@@ -60,8 +76,6 @@ $(document).ready(function () {
 
 
     });
-
-
 
 
 });
