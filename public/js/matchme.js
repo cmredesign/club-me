@@ -4,8 +4,9 @@ $('a[href*=#]').click(function(){
   
 
 var animationEndEvent = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+var count;
 
-var Person = {
+var clubs = {
   wrap: $('#people'),
   people: [
     {
@@ -47,9 +48,11 @@ var Person = {
   ],   
   add: function(){
     for(var n = 0; n < this.people.length; n++) {
-      random = this.people[n];    
-      this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong></span></div>");
+      club = this.people[n];    
+      this.wrap.append("<div class='person'><img alt='" + club.name + "' src='" + club.img + "' /><span><strong>" + club.name + "</strong></span></div>");
     }
+    count = this.people.length;
+    console.log("start" + count);
     /*
     var random =     this.people[Math.floor(Math.random() * this.people.length)];
     this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong></span></div>");
@@ -57,12 +60,31 @@ var Person = {
   }
 }
 
+var ind = 0;
+var added = [];
+for(var n = 0; n < count; n++) {
+  added[n] = false;
+}
+var hasAdded = 0;
+
 var App = {
   yesButton: $('.button.yes .trigger'),
   noButton: $('.button.no .trigger'),
   blocked: false,
   like: function(liked){
     var animate = liked ? 'animateYes' : 'animateNo';
+    added[ind] = liked ? true : false;
+    if(added[ind] == true) {
+      hasAdded++;
+      console.log("hA"+hasAdded);
+      //console.log(clubs.people[ind]["img"]);
+      var toAdd = "<a href='#'><img style='width:150px; padding:1rem; text-align:center; display:block' class='img-responsive' src='" + clubs.people[ind]["img"] + "''></a>";
+      //var toAdd = "<a href='" + data.match[ind]["url"] + "'>" + "<img style='width:150px; padding:1rem; text-align:center; display:block' class='img-responsive' src='" + data.match[ind]["image2"] + "''></a>";
+      $(".bookmarked").append("<div>" + toAdd +"</div>");
+    }
+    
+    console.log("ind:" + ind)
+
     var self = this;
     if (!this.blocked) {
       this.blocked = true;           
@@ -70,10 +92,31 @@ var App = {
         $(this).remove();
         /*Person.add();*/
         self.blocked = false;
+        count--; /* decrement count */
+        ind++;
+        //console.log(clubs.people[count]["img"]);
       });
     }
+    console.log(count);
+    if(count == 1) 
+    {
+      /* display if at least one like */
+      if(hasAdded > 0){
+        $("#bookmarked h2").html("It's a Match!");
+      }
+      /* show matches(if any), hide the match-me system */
+      $("#bookmarked").css("display", "");
+      $("#people").css("display", "none");
+      $("#control").css("display", "none");
+    }
   }
+  
 };
+function showBookmarked() {
+  $("#bookmarked").css("display", "");
+  $("#yesno").css("display", "none");
+}
+
 
 var Phone = {
   wrap: $('#phone'),
@@ -97,8 +140,10 @@ App.noButton.on('mousedown', function() {
   App.like(false);
 });
 $(document).ready(function() {
-  Person.add();
+  clubs.add();
 });
+
+
 /*
 $(document).ready(function() {
   Phone.updateClock();

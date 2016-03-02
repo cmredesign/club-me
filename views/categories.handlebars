@@ -41,7 +41,12 @@
           <div class="drawers-wrapper">
               
               <ul class="drawers" style="list-style-type:none">
-
+              {{#each clubs}}
+              <li class="drawer">
+                  <a href="categories/{{@key}}"><h4 class="drawer-handle" >{{@key}} ({{this.length}})</h4></a>
+              </li>
+              {{/each}}
+              <!--
                 <li class="drawer">
                   <a href="academic"><h4 class="drawer-handle" >Academic&nbsp;(54)</h4></a>
                 </li>
@@ -163,6 +168,7 @@
 
 
                 </li>
+                -->
                 
               </ul>
 
