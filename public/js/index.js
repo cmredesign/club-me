@@ -46,32 +46,20 @@ $(document).ready(function() {
     var uname = $("input[name=username]").val();
     var pw = $("input[name=password]").val();
     var that = this;
-    var namepw = {
-      "uname"  : uname,
-      "password" : pw
-    };
-
-    // use post so name and password can be passed in
-    // Problem: For a brief moment, will display the invalid credentials message
-    var valid = $.post("/user/login", namepw, function()
-    {
-      console.log("Making sure");
-      animateSignIn();
-      return true;
-    });
-    if(!valid) 
-    {
-      valid = $.post("/club/login", namepw, function()
+    
+    /* control structure to check signin */
+    valid = $.get("/json/users.json", function(data){
+      var users = data.users;
+      for(var n = 0; n < users.length; n++)
       {
-        animateSignIn();
-        return true;
-      });
-      if(!valid)
-      {
-        $("#status").html("Invalid credentials. Please try again.");
-        $("#status").css("padding-top", "1.6rem");
+        if((users[n].name == uname) && (users[n].password == pw)) {
+          animateSignIn();
+          return;
+        }
       }
-    };
+      $("#status").html("Invalid credentials. Please try again.");
+      $("#status").css("padding-top", "1.6rem");
+    });
 
     /* I have no idea what this does */
     //if (animating) return
@@ -101,23 +89,6 @@ $(document).ready(function() {
    $(document).on("click", ".create", function(e) {
     if (animating) return;
     animating = true;
-    var uname = $("input[type=name]").val();
-    var email = $("input[type=email").val();
-    var pw = document.getElementById("pass").value;
-    var college = $("input[type=college]").val();
-    var major = $("input[type=major]").val();
-    var grade = $("input[type=grade]").val();
-    var json = {
-      'name': uname,
-      'email': email,
-      'password': pw,
-      'college': college,
-      'major': major,
-      'grade': grade
-    };
-    $.post('/user/new', json, function() {
-      window.location.href = '/'; // reload the page
-    });
     var that = this;
     ripple($(that), e);
     $(that).addClass("processing");
@@ -141,17 +112,6 @@ $(document).ready(function() {
   $(document).on("click", ".createclub", function(e) {
     if (animating) return;
     animating = true;
-    var uname = $("input[type=name]").val();
-    var email = $("input[type=email").val();
-    var pw = document.getElementById("passw").value;
-    var json = {
-      "clubname": uname,
-      "email": email,
-      "password": pw,
-    };
-    $.post('/club/new', json, function() {
-      window.location.href = '/'; // reload the page
-    });
     var that = this;
     ripple($(that), e);
     $(that).addClass("processing");
