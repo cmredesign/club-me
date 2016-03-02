@@ -46,8 +46,14 @@ var Person = {
     }
   ],   
   add: function(){
+    for(var n = 0; n < this.people.length; n++) {
+      random = this.people[n];    
+      this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong></span></div>");
+    }
+    /*
     var random =     this.people[Math.floor(Math.random() * this.people.length)];
     this.wrap.append("<div class='person'><img alt='" + random.name + "' src='" + random.img + "' /><span><strong>" + random.name + "</strong></span></div>");
+    */
   }
 }
 
@@ -62,7 +68,7 @@ var App = {
       this.blocked = true;           
       $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
         $(this).remove();
-        Person.add();
+        /*Person.add();*/
         self.blocked = false;
       });
     }
@@ -90,7 +96,10 @@ App.yesButton.on('mousedown', function() {
 App.noButton.on('mousedown', function() {
   App.like(false);
 });
-
+$(document).ready(function() {
+  Person.add();
+});
+/*
 $(document).ready(function() {
   Phone.updateClock();
   setInterval('Phone.updateClock()', 1000);
