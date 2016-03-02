@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   var sbar = 
    '<nav id="navbar" class="navbar-fixed-bottom">' +
-  '<ul>' +
+  '<ul id="navlist">' +
     '<li><a href="/indprofile"><span><img class="link" src="images/prof.png"/></span>Profile</a></li>' +
     '<li><a href="/myclubs"><span><img class="link" src="images/roster.png"/></span>My Clubs</a></li>' +
       '<li><a href="/matchme"><span><img class="link" src="images/match.png"/></span>clubMe</a></li>' +

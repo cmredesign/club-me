@@ -5,24 +5,24 @@
   font-family: 'FontAwesome', sans-serif;
 }
 
-ul {      
+#navlist {      
     margin:0;     
     padding:0;     
     list-style:none 
 } 
 
-ul li a, ul li span {  
+#navlist li a, #navlist li span {  
     display: block;
 } 
 
-ul li span {   
+#navlist li span {   
     height:30px;/* height and width of icon  */     
     width:30px;/*   "  " */
     background-image: url("images/prof.png");
     margin:auto;      
 } 
 
-ul li { 
+#navlist li { 
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     width: 7.5rem;    
@@ -30,12 +30,12 @@ ul li {
 
 } 
 
-ul li a {     
+#navlist li a {     
     text-decoration:none;     
     padding:0  10px; 
 } 
 
-ul li.first { 
+#navlist li.first { 
     border-left: 1px solid #999; 
 } 
 
