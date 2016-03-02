@@ -1,3 +1,4 @@
+
 /**
  * Module dependencies.
  */
@@ -5,17 +6,10 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars');
-var mongoose = require('mongoose');
+var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var project = require('./routes/project');
-
-var local_database_name = 'clubme';
-var local_database_uri  = 'mongodb://localhost/' + local_database_name
-var database_uri = process.env.MONGOLAB_URI || local_database_uri
-mongoose.connect(database_uri);
-
 var matchme = require('./routes/matchme');
 var settings = require('./routes/settings');
 var myclubs = require('./routes/myclubs');
@@ -52,10 +46,6 @@ app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.post('/user/login', isignup.checkUser);
-app.post('/club/login', csignup.checkClub);
-app.post('/user/new', isignup.addUser);
-app.post('/club/new', csignup.addClub);
 
 // development only
 if ('development' == app.get('env')) {
@@ -66,7 +56,6 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/project/:name', project.viewProject);
 app.get('/settings', settings.view);
-
 app.get('/matchme', matchme.view);
 app.get('/myclubs', myclubs.view);
 app.get('/search', search.view);
