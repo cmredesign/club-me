@@ -203,7 +203,7 @@ h4{
      border: 1px solid #545154;
 }
 .drawerz {
-     font-size: 1.2rem;
+     font-size: 2rem;
 }
 
 .styled a {
@@ -213,8 +213,10 @@ h4{
   padding-bottom: 2rem;
   margin-left: 18px;
   width: 88%;
+
 }
 .drawer-handle {
+    font-size: 2rem;
      text-align: center;
      border: 1px solid #545154;
      padding:10px;
