@@ -1,16 +1,36 @@
 /* source: http://jsbin.com/OjOTIGaP/1/edit?html,js,output */
 
 $(document).ready(function () {
-
-  var sbar = 
-   '<nav id="navbar" class="navbar-fixed-bottom">' +
-  '<ul id="navlist">' +
-    '<li><a href="/indprofile"><span><img class="link" src="/images/prof.png"/></span>Profile</a></li>' +
-    '<li><a href="/myclubs"><span><img class="link" src="/images/roster.png"/></span>My Clubs</a></li>' +
-      '<li><a href="/matchme"><span><img class="link" src="/images/match.png"/></span>clubMe</a></li>' +
-        '<li><a href="/categories"><span><img class="link" src="/images/search.png"/></span>Categories</a></li>' +
-          '<li><a href="/#"><span><img class="link" src="/images/logout.png"/></span>Logout</a></li>' +
-'</ul>';
+  var sbar = '<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="slide-nav">'+
+    '<div class="container">'+
+      '<div class="navbar-header">'+
+        '<a class="navbar-toggle">'+
+          '<span class="sr-only">Toggle navigation</span>'+
+          '<span class="icon-bar"></span>'+
+          '<span class="icon-bar"></span>'+
+          '<span class="icon-bar"></span>'+
+        '</a>'+
+        '<a class="col-m-6" id="imaginary_container" href="#">'+
+          '<div class="input-group stylish-input-group">'+
+            '<input type="text" class="form-control"  placeholder="Search" >'+
+            '<span class="input-group-addon">'+
+              '<button type="submit">'+
+                '<span class="glyphicon glyphicon-search"></span>'+
+              '</button>'+
+            '</span>'+
+          '</div>'+
+        '</a>'+
+      '</div>'+
+      '<div id="slidemenu">'+
+        '<ul class="nav navbar-nav">'+
+          '<li><a href="/indprofile">Profile</a></li>'+
+          '<li><a href="/matchme">Match Me</a></li>'+
+          '<li><a href="/myclubs">My Clubs</a></li>'+
+          '<li><a href="/categories">Club Search</a></li>'+
+          '<li><a href="/#">Logout</a></li>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
 
     console.log(sbar);
 
